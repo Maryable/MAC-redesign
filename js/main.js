@@ -8,23 +8,41 @@ $(function(){
 
   // main-menu hover == sub-menu down
   $('.sub-parent2').hover(function(){
-    $('.skin-sub-wrap').stop().slideDown();
+    $('.skin-sub-wrap').stop().slideDown(600);
   }, function(){
-    $('.skin-sub-wrap').stop().slideUp();
+    $('.skin-sub-wrap').stop().slideUp(300);
+  });
+
+  $('.skin-sub-wrap').hover(function(){
+    $('.skin-sub-wrap').stop().show();
+  }, function(){
+    $('.skin-sub-wrap').stop().slideUp(300);
   });
 
   $('.sub-parent1').hover(function(){
-    $('.makeup-sub-wrap').stop().slideDown();
+    $('.makeup-sub-wrap').stop().slideDown(600);
   }, function(){
-    $('.makeup-sub-wrap').stop().slideUp();
+    $('.makeup-sub-wrap').stop().slideUp(300);
   });
+
+  $('.makeup-sub-wrap').hover(function(){
+    $('.makeup-sub-wrap').stop().show();
+  }, function(){
+    $('.makeup-sub-wrap').stop().slideUp(300);
+  });
+
 
   // when login icon hover, show login pop up
   $('.login-btn').hover(function(){
-    $('.login-hover').stop().show(400);
+    $('.login-hover').stop().fadeIn(400);
   }, function(){
-    $('.login-hover').stop().hide(400);
+    $('.login-hover').stop().fadeOut(250);
   });
 
+  $('.cart-btn').hover(function(){
+    $('.cart-hover').stop().fadeIn(400);
+  }, function(){
+    $('.cart-hover').stop().fadeOut(250);
+  });
 
 });
