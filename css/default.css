@@ -1,0 +1,109 @@
+/* Global */
+:root {
+    /* Color */
+    --color-white: #ffffff;
+    --color-light-white: #E5E5E5;
+    --color-dark-white: #bdbdbd;
+    --color-gray: #999999;
+    --color-light-black: #454545;
+    --color-dark-black: #1A1A1A;
+    --color-black: #000000;
+    --color-hashtag: #00376B;
+    --color-light-orange: #FFD18C;
+  
+    /* Font size */
+    --font-title: 32px;
+    --font-large: 24px;
+    --font-medium: 20px;
+    --font-regular: 18px;
+    --font-small: 16px;
+    --font-thin: 14px;
+    --font-micro:12px;
+  
+    /* Font weight */
+    --weight-black:900;
+    --weight-heavy:800;
+    --weight-extrabold: 700;
+    --weight-bold: 600;
+    --weight-regular: 400;
+    --weight-light: 300;
+    --weight-thin: 100;
+  
+    /* size */
+    --size-border-raidus: 4px;
+    --size-product-width: 387px;
+    --size-product-height: 380px;
+  
+    /* Animation */
+    --animation-duration: 300ms;
+  }
+  
+
+
+  /* Typography */
+  h2 {
+  /* for the sections and articles titles */
+    font-size: var(--font-title);
+    font-weight: var(--weight-bold);
+    color: var(--color-black);
+    margin: 8px 0;
+  }
+  
+  h3 {
+    /* best seller page title */
+    font-size: 50px;
+    font-weight: var(--weight-bold);
+    color: var(--color-black);
+    margin: 8px 0;
+  }
+  
+  h4 {
+    /* products title */
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 8px 0;
+  }
+
+  h5 {
+    /* sub-menu ad */
+    font-size: var(--font-small) ;
+  font-weight: var(--weight-light) ;
+  }
+
+
+  /* universal tags */
+  body {
+    font-family: "S-CoreDream-3Light", "Raleway";
+    cursor: default;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+    outline: none;
+    color: #454545;
+  }
+  
+  button, input {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+  }
+
+  img {
+    display: block;
+  }
+
+  .center__1200 {
+    width: 1200px;
+    margin: 0 auto;
+  }

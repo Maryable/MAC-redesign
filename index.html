@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAC cosmetics Korea</title>
+  <meta name="author" content="Goeun Lee">
+  <meta name="description" content="Static web page design and publishing project">
+  <!-- description -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <script src="https://kit.fontawesome.com/b3711eecd7.js" crossorigin="anonymous"></script>
+  <!-- web fonts -->
+  <link rel="stylesheet" href="./css/default.css">
+  <link rel="stylesheet" href="./css/fontface.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/mobile.css">
+  <link rel="shortcut icon" type="images/png" href="./imgs/favicon.ico">
+  <!-- styles  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./js/main.js" ></script>
+</head>
+<body>
+  <!-- header for mobile -->
+  <div class="mobile__header">
+    <div class="leftSide">
+      <div class="hamburger__bar">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <a href="#"><img src="./imgs/h_cart_icon.svg" alt="my cart icon"></a>
+    </div>
+    <div><a href="index.html"><img src="./imgs/Mac_cosmetics_logo.svg" alt="Logo" class="m_logo"></a></div>
+    <div class="mobile__icon">
+      <div class="search__box search__box__mobile">
+        <input type="search" class="search__txt" placeholder="검색">
+        <a class="search__btn" href="#"><img src="./imgs/h_search_icon.svg" alt="search icon"></a>
+      </div> <!-- search__box -->
+    </div> <!-- mobile__icon -->
+  </div> <!-- mobile__header -->
+  <ul class="nav__menu__mobile">
+    <li></li>
+    <li><a href="#"><span>신제품 컬렉션</span></a></li>
+    <li><a href="#">베스트셀러</a></li>
+    <li><a href="#">메이크업</a></li>
+    <li><a href="#">스킨케어</a></li>
+    <li><a href="#">컨설팅</a></li>
+    <li><a href="#">맥스토리</a></li>
+    <li><a href="#"><span>공식몰 단독 혜택</span></a></li>
+    <li class="mobile"><a href="#"><img src="./imgs/h_login_icon.svg" alt="login & mypage icon">  로그인/회원가입</a></li>
+    <li class="mobile"><a href="#"><img src="./imgs/h_spot_icon.svg" alt="find a store icon">  매장찾기</a></li>
+  </ul>
+
+  <div class="header-wrap">
+    <header>
+      <!-- header for webpage -->
+      <div class="wrap center__1200">
+          <div class="announce">
+              <a href="#"><img src="imgs/live_chat_icon.png" alt="Live Chat"></a>
+              <p><a href="#">첫 구매 15% 할인 및 전 구매 무료 배송 / 배송 지연 안내</a></p>
+          </div> <!-- announce end -->
+          <h1><a href="index.html"><img src="./imgs/Mac_cosmetics_logo.png" alt="Logo"></a></h1>
+          <ul class="header__icons">
+              <li>
+                <div class="search__box">
+                  <input type="search" class="search__txt" placeholder="검색">
+                  <a class="search__btn" href="#"><img src="./imgs/h_search_icon.svg" alt="search icon"></a>
+                </div>
+              </li>
+              <li><a href="#"><img src="./imgs/h_spot_icon.svg" alt="find a store icon"></a></li>
+              <li><a href="#"><img src="./imgs/h_cart_icon.svg" alt="my cart icon"></a></li>
+              <li class="login-btn"><a href="#"><img src="./imgs/h_login_icon.svg" alt="login & mypage icon"></a>
+                <div class="login-hover">
+                  <p>로그인 <a href="#">회원가입</a></p>
+                  <form action="#">
+                    <div class="id-pw">
+                      <label for="SignIn">아이디</label>
+                      <input type="email" id="SignIn" placeholder="이메일주소를 입력하세요" required>
+                      <label for="PW">비밀번호</label>
+                      <input type="password" id="PW" placeholder="비밀번호를 입력하세요" required>
+                    </div>
+                    <div class="check-id">
+                      <input type="checkbox" id="rememberId" name="rememberId">
+                      <label for="rememberId" class="rememberId"><span>아이디 저장</span></label>
+                    </div>
+                    <button type="submit" id="login-btn">로그인</button>
+                  </form>
+                </div> <!-- login-hover -->
+              </li> <!-- login icon -->
+          </ul>
+          
+      </div> <!-- wrap / 1200 end -->
+    </header>
+  
+    <nav id="navbar">
+      <div class="center__1200 nav__wrap">
+        <ul class="nav__menu">
+          <li><a href="#"><span>신제품 컬렉션</span></a></li>
+          <li><a href="#">베스트셀러</a></li>
+          <li class="sub-parent1"><a href="#">메이크업</a></li> 
+          <li class="sub-parent2"><a href="#">스킨케어</a></li>
+          <li><a href="#">컨설팅</a></li> 
+          <li><a href="#">맥스토리</a></li>
+          <li><a href="#"><span>공식몰 단독</span></a></li>
+        </ul>
+      </div> <!-- wrap center__1200  -->
+  
+      <div class="skin-sub-wrap sub-wrap">
+        <div class="sub__menu center__1200">
+          <!--sub01 Mac Try On  -->
+          <ul class="sub-ad">
+            <li>
+              <div class="ad-img"><img src="imgs/sub_prep+prime.png" alt="Prep+Prime"></div>
+              <h5>완벽한 메이크업을 위한 <span>프렙 + 프라임</span></h5>
+              <a href="#">지금 체험하기</a>
+            </li>
+          </ul> <!-- sub-ad end -->
+          <ul class="sub__list">제품별
+            <li><a href="#">모이스춰라이져</a></li>
+            <li><a href="#">BB + CC</a></li>
+            <li><a href="#">여행용 사이즈</a></li>
+            <li><a href="#">선케어</a></li>
+            <li><a href="#">클랜저 & 토너</a></li>
+            <li><a href="#">마스크</a></li>
+            <li><a href="#">메이크업 리무버</a></li>
+            <li><a href="#">전체보기</a></li>
+          </ul> <!-- sub-list end -->
+          <ul class="sub__list"> 피부 고민별
+            <li><a href="#">수분 & 리페어</a></li>
+            <li><a href="#">주름 완화</a></li>
+            <li><a href="#">모공 & 피부결</a></li>
+            <li><a href="#">자외선 차단</a></li>
+            <li><a href="#">전체보기</a></li>
+          </ul> <!-- sub-list end -->
+          <ul class="sub__list"> 피부 타입별
+            <li><a href="#">극건성</a></li>
+            <li><a href="#">건성</a></li>
+            <li><a href="#">중성/복합성</a></li>
+            <li><a href="#">지성</a></li>
+            <li><a href="#">전체보기</a></li>
+          </ul> <!-- sub-list end -->
+          <ul class="sub__list"> 주요 라인업
+            <li><a href="#">굿바이즈</a></li>
+            <li><a href="#">라이트풀 C+</a></li>
+            <li><a href="#">미네랄라이즈</a></li>
+            <li><a href="#">프로롱웨어</a></li>
+            <li><a href="#">전체보기</a></li>
+          </ul> <!-- sub-list end -->
+          <ul class="sub__list"> 트렌딩 나우
+            <li><a href="#">2020 폴 록</a></li>
+            <li><a href="#">비바 글램 26주년</a></li>
+            <li><a href="#">롱웨어 스튜디오</a></li>
+            <li><a href="#">립스틱 TOP 20</a></li>
+          </ul> <!-- sub-list end -->
+        </div> <!-- submenu -->
+      </div>
+      <div class="makeup-sub-wrap sub-wrap">
+        <div class="sub__menu center__1200">
+          <!--sub01 Mac Try On  -->
+          <ul class="sub-ad">
+            <li>
+              <div class="ad-img"><img src="imgs/mac_try_on.png" alt="mac try on image"></div>
+              <h5>가상 메이크오버<span>M.A.C TRY ON</span></h5>
+              <a href="#">지금 체험하기</a>
+            </li>
+          </ul> <!-- sub-ad end -->
+          <ul class="sub__list"> 아이
+            <li><a href="#">섀도우</a></li>
+            <li><a href="#">라이너</a></li>
+            <li><a href="#">브로우</a></li>
+            <li><a href="#">전체보기</a></li>
+          </ul> <!-- sub-list end -->
+          <ul class="sub__list"> 립
+            <li><a href="#">립스틱</a></li>
+            <li><a href="#">립펜슬</a></li>
+            <li><a href="#">립케어</a></li>
+            <li><a href="#">립 팔레트</a></li>
+            <li><a href="#">전체보기</a></li>
+          </ul> <!-- sub-list end -->
+          <ul class="sub__list"> 페이스
+            <li><a href="#">파운데이션</a></li>
+            <li><a href="#">쿠션 & 파우더</a></li>
+            <li><a href="#">컨실러</a></li>
+            <li><a href="#">컨투어</a></li>
+            <li><a href="#">전체보기</a></li>
+          </ul> <!-- sub-list end -->
+          <ul class="sub__list"> 치크
+            <li><a href="#">블러쉬</a></li>
+            <li><a href="#">브론저</a></li>
+            <li><a href="#">하이라이터</a></li>
+            <li><a href="#">전체보기</a></li>
+          </ul> <!-- sub-list end -->
+          <ul class="sub__list"> 프라이머
+            <li><a href="#">프렙+프라임</a></li>
+            <li><a href="#">라이트풀</a></li>
+            <li><a href="#">픽스 플러스</a></li>
+            <li><a href="#">전체보기</a></li>
+          </ul> <!-- sub-list end -->
+          <ul class="sub__list"> 브러시 & 툴
+            <li><a href="#">프로팔레트</a></li>
+            <li><a href="#">컨테이너</a></li>
+            <li><a href="#">어플리케이터</a></li>
+            <li><a href="#">페이스 브러시</a></li>
+            <li><a href="#">립 브러시</a></li>
+            <li><a href="#">아이 브러시</a></li>
+            <li><a href="#">전체보기</a></li>
+          </ul> <!-- sub-list end -->
+        </div> <!-- submenu -->
+      </div>
+    </nav>
+  </div> <!-- header _ nav wrap -->
+  
+  <section class="slider-wrap center__1200">
+    
+  </section>
+
+
+</body>
+</html>
