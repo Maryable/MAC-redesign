@@ -74,10 +74,11 @@
 
   /* universal tags */
   body {
+
     font-family: "S-CoreDream-3Light", "Raleway";
     cursor: default;
   }
-  
+
   * {
     margin: 0;
     padding: 0;
@@ -106,4 +107,13 @@
   .center__1200 {
     width: 1200px;
     margin: 0 auto;
+  }
+
+  .center__1440 {
+    width: 1440px;
+    margin: 0 auto;
+  }
+
+  header, section, footer {
+    width: 100%;
   }
