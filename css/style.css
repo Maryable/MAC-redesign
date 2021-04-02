@@ -457,9 +457,8 @@ section {
 }
 
 /* --------------------main-new-collciont */
-.main-new-collection {
+.main-new-collection, tab-menu-container {
   outline: 1px solid black;
-  margin-top: 150px;
   position: relative;
 }
 
@@ -474,7 +473,7 @@ section {
   font-weight: var(--weight-regular);
 }
 .new-collection-imgs {
-  width: 2322px;
+  width: 2400px;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -518,3 +517,63 @@ section {
   font-size: 50px;
   color: var(--color-light-black);
 }
+
+/* ------------------best-seller & must-have */
+.tab-menu-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+}
+
+.tab-menu-btn > button > i {
+  font-size: 50px;
+  color: var(--color-light-black);
+}
+
+.best-tab-wrap {
+  position: relative;
+  width: 1200px;
+  height: 450px;
+  overflow: hidden;
+  outline: 1px solid blue;
+}
+
+.best-tab-btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.best-tab-btn > button {
+  margin: 0 10px;
+  color: var(--color-dark-white);
+  text-decoration: underline;
+}
+
+.best-tab-btn > button.active {
+  color: var(--color-dark-black);
+}
+
+.tab-menu-list {
+  width: 2400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  outline: 1px solid violet;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-menu-list > li {
+  text-align: center;
+}
+
+.must-have-imgs {
+  opacity: 0;
+}
+
