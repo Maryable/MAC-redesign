@@ -17,7 +17,7 @@
     --font-medium: 20px;
     --font-regular: 18px;
     --font-small: 16px;
-    --font-thin: 14px;
+    --font-extrasmall: 14px;
     --font-micro:12px;
   
     /* Font weight */
@@ -71,6 +71,14 @@
   font-weight: var(--weight-light) ;
   }
 
+  h6 {
+    /* slide titles on main-page*/
+    font-size: 28px;
+    font-weight: var(--weight-bold);
+    text-align: center;
+    margin: 14px 0;
+  }
+
 
   /* universal tags */
   body {
@@ -116,4 +124,8 @@
 
   header, section, footer {
     width: 100%;
+  }
+
+  .margin150 {
+    margin-top: 150px;
   }
