@@ -74,7 +74,7 @@
   h6 {
     /* slide titles on main-page*/
     font-size: 28px;
-    font-weight: var(--weight-bold);
+    font-weight: var(--weight-heavy);
     text-align: center;
     margin: 14px 0;
   }
@@ -82,7 +82,6 @@
 
   /* universal tags */
   body {
-
     font-family: "S-CoreDream-3Light", "Raleway";
     cursor: default;
   }
@@ -128,4 +127,10 @@
 
   .margin150 {
     margin-top: 150px;
+  }
+
+  .Eng-title {
+    font-family: 'Raleway';
+    font-weight: var(--weight-bold);
+    font-size: var(--font-title);
   }

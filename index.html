@@ -15,13 +15,14 @@
   <link rel="stylesheet" href="./css/default.css">
   <link rel="stylesheet" href="./css/fontface.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/mobile.css">
   <link rel="shortcut icon" type="images/png" href="./imgs/favicon.ico">
   <!-- styles  -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
-  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script defer src="./js/main.js" ></script>
 </head>
 <body>
@@ -155,7 +156,7 @@
           <!--sub01 Mac Try On  -->
           <ul class="sub-ad">
             <li>
-              <div class="ad-img"><img src="imgs/sub_prep+prime.png" alt="Prep+Prime"></div>
+              <div class="ad-img"><a href="#"><img src="imgs/sub_prep+prime.png" alt="Prep+Prime"></a></div>
               <h5>완벽한 메이크업을 위한 <span>프렙 + 프라임</span></h5>
               <a href="#">지금 체험하기</a>
             </li>
@@ -204,7 +205,7 @@
           <!--sub01 Mac Try On  -->
           <ul class="sub-ad">
             <li>
-              <div class="ad-img"><img src="imgs/mac_try_on.png" alt="mac try on image"></div>
+              <div class="ad-img"><a href="#"><img src="imgs/mac_try_on.png" alt="mac try on image"></a></div>
               <h5>가상 메이크오버<span>M.A.C TRY ON</span></h5>
               <a href="#">지금 체험하기</a>
             </li>
@@ -342,15 +343,15 @@
     <article class="tab-menu-container center__1440 margin150">
       <aside class="tab-menu-wrap center__1200">
         <div class="best-tab-btn">
-          <button class="best-seller-btn active"><h6>BEST SELLER</h6></button>
-          <button class="must-have-btn"><h6>MUST HAVE</h6></button>
+          <button class="Eng-title best-seller-btn active">BEST SELLER</button>
+          <button class="Eng-title must-have-btn">MUST HAVE</button>
         </div><!-- tab menu button -->
         <div class="best-tab-wrap">
-          <!-------------------------- best-seller container -->
           <div class="tab-menu-btn">
-            <button class="best-left must-left"><i class="xi-angle-left-thin"></i></button>
-            <button class="best-right must-right"><i class="xi-angle-right-thin"></i></button>
+            <button class="best-left"><i class="xi-angle-left-thin"></i></button>
+            <button class="best-right"><i class="xi-angle-right-thin"></i></button>
           </div>
+          <!-------------------------- best-seller container -->
         <ul class="tab-menu-list best-seller-imgs">
           <li> <!-- item1 -->
             <a href="#"><img src="imgs/best_seller_1.png" alt="best seller item">
@@ -363,8 +364,8 @@
           <li> <!-- item2 -->
             <a href="#"><img src="imgs/best_seller_2.png" alt="best seller item">
               <div class="best-seller-desc">
-                <p>글로우 플레이 립 밤</p>
-                <h4><span>￦</span> 32,000</h4>
+                <p>파우더 키스 립컬러</p>
+                <h4><span>￦</span> 36,000</h4>
               </div>
             </a>
           </li><!-- item2 -->
@@ -379,23 +380,23 @@
           <li> <!-- item4 -->
             <a href="#"><img src="imgs/best_seller_4.png" alt="best seller item">
               <div class="best-seller-desc">
-                <p>글로우 플레이 립 밤</p>
-                <h4><span>￦</span> 32,000</h4>
+                <p>아이쉐도우</p>
+                <h4><span>￦</span> 27,000</h4>
               </div>
             </a>
           </li><!-- item4 -->
           <li> <!-- item5 -->
             <a href="#"><img src="imgs/best_seller_5.png" alt="best seller item">
               <div class="best-seller-desc">
-                <p>글로우 플레이 립 밤</p>
-                <h4><span>￦</span> 32,000</h4>
+                <p>스튜디오 픽스 플루이드 SPF15/PA++ <br /> 스킨 밸런싱 컴플렉스</p>
+                <h4><span>￦</span> 49,000</h4>
               </div>
             </a>
           </li><!-- item5 -->
           <li> <!-- item6 -->
             <a href="#"><img src="imgs/best_seller_6.png" alt="best seller item">
               <div class="best-seller-desc">
-                <p>글로우 플레이 립 밤</p>
+                <p>아이 브로우 빅 부스트 파이버 젤</p>
                 <h4><span>￦</span> 32,000</h4>
               </div>
             </a>
@@ -403,11 +404,15 @@
         </ul> <!-- best-seller-imgs -->
 
         <!-------------------------- must-have container -->
+        <div class="tab-menu-btn">
+          <button class="must-left"><i class="xi-angle-left-thin"></i></button>
+          <button class="must-right"><i class="xi-angle-right-thin"></i></button>
+        </div>
         <ul class="tab-menu-list must-have-imgs">
           <li> <!-- item1 -->
             <a href="#"><img src="imgs/must-have1.png" alt="best seller item">
               <div class="best-seller-desc">
-                <p>파우더 키스 립스틱</p>
+                <p>파우더 키스 아이쉐도우</p>
                 <h4><span>￦</span> 32,000</h4>
               </div>
             </a>
@@ -415,40 +420,40 @@
           <li> <!-- item2 -->
             <a href="#"><img src="imgs/must-have2.png" alt="best seller item">
               <div class="best-seller-desc">
-                <p>글로우 플레이 립 밤</p>
-                <h4><span>￦</span> 32,000</h4>
+                <p>익스텐디드 플레이 래쉬 마스카라</p>
+                <h4><span>￦</span> 52,000</h4>
               </div>
             </a>
           </li><!-- item2 -->
           <li> <!-- item3 -->
             <a href="#"><img src="imgs/must-have3.png" alt="best seller item">
               <div class="best-seller-desc">
-                <p>글로우 플레이 립 밤</p>
-                <h4><span>￦</span> 32,000</h4>
+                <p>글로우 플레이 블러쉬</p>
+                <h4><span>￦</span> 36,000</h4>
               </div>
             </a>
           </li><!-- item3 -->
           <li> <!-- item4 -->
             <a href="#"><img src="imgs/must-have4.png" alt="best seller item">
               <div class="best-seller-desc">
-                <p>글로우 플레이 립 밤</p>
-                <h4><span>￦</span> 32,000</h4>
+                <p>스트롭크립</p>
+                <h4><span>￦</span> 51,000</h4>
               </div>
             </a>
           </li><!-- item4 -->
           <li> <!-- item5 -->
             <a href="#"><img src="imgs/must-have5.png" alt="best seller item">
               <div class="best-seller-desc">
-                <p>글로우 플레이 립 밤</p>
-                <h4><span>￦</span> 32,000</h4>
+                <p>아이 콜</p>
+                <h4><span>￦</span> 63,000</h4>
               </div>
             </a>
           </li><!-- item5 -->
           <li> <!-- item6 -->
-            <a href="#"><img src="imgs/must-have6.png" alt="best seller item">
+            <a href="#"><img src="imgs/must-have6.jpg" alt="best seller item">
               <div class="best-seller-desc">
-                <p>글로우 플레이 립 밤</p>
-                <h4><span>￦</span> 32,000</h4>
+                <p>아이 섀도우 바이 나인 : 앰버 타임스 나인</p>
+                <h4><span>￦</span> 63,000</h4>
               </div>
             </a>
           </li><!-- item6 -->
@@ -456,14 +461,166 @@
         </div>
       </aside>
     </article> <!-- tab menu 1440 end -->
-  </section> <!-- page 0 -->
 
+    <article class="new-collection-full-slide margin150">
+      <h6 class="Eng-title">NEW COLLECTION</h6>
+      <div class="full-size-wrap">
+        <div class="slide-dim-wrap">
+          <div class="slide-dim slide-dim-left"></div>
+          <div class="slide-dim slide-dim-center"></div>
+          <div class="slide-dim slide-dim-right"></div>
+        </div>
+        <aside class="full-slide">
+          <div><a href="#"><img src="imgs/new collection0.png" alt="new collction"></a></div>
+          <div><a href="#"><img src="imgs/new collection1.png" alt="new collction"></a></div>
+          <div><a href="#"><img src="imgs/new collection2.png" alt="new collction"></a></div>
+          <div><a href="#"><img src="imgs/new collection3.png" alt="new collction"></a></div>
+          <div><a href="#"><img src="imgs/new collection4.png" alt="new collction"></a></div>
+        </aside>
+      </div>
+    </article> <!-- new-collection-full-slide -->
+
+    <article class="margin150">
+      <ul class="promo-banner-wrap center__1440">
+        <li class="promo-banner"><a href="#">
+          <div class="promo__imgbox">
+            <img src="imgs/promo-banner1.jpg" alt="promotion banner">
+            <div class="promo___description">
+              <h6>첫 구매 15% OFF</h6><hr><span>가입하기</span>
+            </div>
+          </div>
+          <p>첫 구매 15% OFF</p>
+          <span>첫 구매 고객 15% 부터 할인 <br /> 전 구매 무료 배송 혜택까지! </span>
+        </a></li>
+        <li class="promo-banner"><a href="#">
+          <div class="promo__imgbox">
+            <img src="imgs/promo-banner2.jpg" alt="promotion banner">
+            <div class="promo___description">
+              <h6>백 투 맥 프로모션</h6><hr><span>자세히 보기</span>
+            </div>
+          </div>
+          <p>백 투 맥 프로모션</p>
+          <span>M.A.C 제품 빈 용기 5개를 <br /> 보내주시면 립스틱 1개를 드립니다. </span>
+        </a></li>
+        <li class="promo-banner"><a href="#">
+          <div class="promo__imgbox">
+            <img src="imgs/promo-banner3.png" alt="promotion banner">
+            <div class="promo___description">
+              <h6>메이크업 컨설팅</h6><hr><span>예약하기</span>
+            </div>
+          </div>
+          <p>메이크업 컨설팅</p>
+          <span>M.A.C 아티스트의 프로페셔널한 <br />뷰티 컨설팅을 경험해보세요.</span>
+        </a></li>
+        <li class="promo-banner"><a href="#">
+          <div class="promo__imgbox">
+            <img src="imgs/promo-banner4.jpg" alt="promotion banner">
+            <div class="promo___description">
+              <h6>라이브 챗 어드바이저</h6><hr><span>LIVE CHAT 클릭!</span>
+            </div>
+          </div>
+          <p>라이브 챗 어드바이저</p>
+          <span>라이브 챗 어드바이저가 <br /> 여러분의 궁금증을 해결해 드립니다.</span>
+        </a></li>
+      </ul>
+    </article> <!-- promotion banner end -->
+
+    <article class="hashtag-wrap margin150 center__1440">
+      <div class="hashtag-desc">
+        <span>@MACCOSMETICSKOREA</span>
+        <h6>#MACCOSMETICS Brag your skills</h6>
+        <p>사진에 #MACCOSMETICS를 태그하여 당신의 멋진 메이크업 스킬을 보여주세요. 맥 공식몰에 소개 될 수 있습니다! </p>
+        </div>
+      <div class="insta-pics-wrap center__1440">
+        <div class="instagram-form">
+          <a href="#">
+            <div class="insta__avatar">
+              <img src="imgs/insta-mac-lover-avatar.png" alt="mac lover avatar">
+              <span>_maclover21</span>
+            </div> <!-- insta__avatar -->
+            <img src="imgs/insta-mac-lover.jpg" alt="mac lover instagram">
+            <p class="insta__like"><i class="xi-heart-o"></i> 좋아요 1,365개</p>
+            <p class="insta__comment"><span>_maclover21</span> #MAC 레알 MLBB맛집 ㅇㅈ☜(ﾟヮﾟ☜)</p>
+            <p class="hashtag">@maccosmeticskorea #MACPowderKiss</p>
+          </a>
+        </div> <!-- instagram-form -->
+        <div class="insta-pics">
+          <a href="#"><img src="imgs/insta1.png" alt="instagram review"></a>
+          <a href="#"><img src="imgs/insta2.png" alt="instagram review"></a>
+          <a href="#"><img src="imgs/insta3.png" alt="instagram review"></a>
+          <a href="#"><img src="imgs/insta4.png" alt="instagram review"></a>
+          <a href="#"><img src="imgs/insta5.png" alt="instagram review"></a>
+          <a href="#"><img src="imgs/insta6.png" alt="instagram review"></a>
+          <a href="#"><img src="imgs/insta7.png" alt="instagram review"></a>
+          <a href="#"><img src="imgs/insta8.png" alt="instagram review"></a>
+        </div> <!-- insta-pics -->
+      </div> <!-- insta-pics-wrap  -->
+    </article> <!-- hashtag event end -->
+  </section> <!-- page 0 -->
+<!-- 
   <section class="page1">page1</section>
   <section class="page2">page2</section>
   <section class="page3">page3</section>
   <section class="page4">page4</section>
-  <section class="page5">page5</section>
+  <section class="page5">page5</section> -->
 
+  <footer>
+    <div class="event-banner-wrap">
+      <div class="event__banner center__1200">
+        <p><a href="#">첫 구매 15% 할인 및 전 구매 무료 배송 / 배송 지연 안내</a></p>
+        <ul class="sns">
+          <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+          <li><a href="#"><i class="xi-instagram"></i></a></li>
+          <li><a href="#"><i class="xi-facebook"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cs__service center__1200">
+      <div class="tel">
+        <p>CONTACT US</p>
+        <address>
+          <a href="tel:+820269713291">02-6971-3291</a> <br>
+          <a href="USER_SUPPORT@KR.MACCOSMETICS.COM">USER_SUPPORT@KR.MACCOSMETICS.COM</a>
+        </address>
+      </div> <!-- tel -->
+      <div class="cs__menu">
+        <ul>ABOUT US
+          <li><a href="#">OUR STORY</a></li>
+          <li><a href="#">맥 에이즈 편드</a></li>
+          <li><a href="#">맥 프로 멤버십</a></li>
+          <li><a href="#">백 투 맥</a></li>
+          <li><a href="#">채용정보</a></li>
+          <li><a href="#">ANIMAL TESTING</a></li>
+        </ul>
+        <ul>M.A.C STORE
+          <li><a href="#">매장안내</a></li>
+          <li><a href="#">메이크업 컨설팅 예약</a></li>
+        </ul>
+        <ul>내 정보 및 주문관리
+          <li><a href="#">나의 맥 러버</a></li>
+          <li><a href="#">내 정보 및 수정</a></li>
+          <li><a href="#">주문 배송 조회</a></li>
+          <li><a href="#">위시리스트</a></li>
+        </ul>
+        <ul>FAQS
+          <li><a href="#">배송정보</a></li>
+          <li><a href="#">반품 및 교환</a></li>
+          <li><a href="#">다른 지역 보기</a></li>
+          <li><a href="#">지역 변경</a></li>
+        </ul>
+      </div> <!-- cs__menu -->
+    </div> <!-- cs__service -->
+    <div class="about__company">
+      <P class="center__1200"><a href="#">로그인</a> | <a href="#">회원가입</a> | 
+        <a href="#">이용약관</a> | <span>개인정보처리방침</span> | 
+        <span>이메일 무단 수집 거부 </span>|  전자공고 | 사이트맵 | 
+        이엘씨에이한국(유) 대표 | 서울시 강남구 강남대로 382 (역삼동) 메리츠타워, 06232 사업자등록번호: 211-81-71889
+        © MAKE-UP ART COSMETICS. ALL WORLDWIDE RIGHTS RESERVED. 통신판매업신고번호: 강남-15737호 | 사업자정보조회 |
+        호스팅서비스 사업자: ㈜엘지유플러스</P>
+    </div>
+  </footer>
 
 </body>
 </html>

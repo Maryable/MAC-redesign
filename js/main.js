@@ -78,7 +78,7 @@ $("#new-left").on("click", function(){
   } 
 });
 
-  // best seller
+  // best seller slide
   $('.best-right').on("click", function(){
     if(count < 3){
         count++;
@@ -93,7 +93,7 @@ $("#new-left").on("click", function(){
     } 
   });
 
-    //must have slide
+    // must have slide
     $('.must-right').on("click", function(){
       if(count < 3){
           count++;
@@ -124,7 +124,16 @@ $("#new-left").on("click", function(){
     $('.best-seller-imgs').css("opacity","0");
   });
 
+  $('.full-slide').slick({
+    dots: true,
+    infinite: true,
+    speed: 400,
+    slidesToShow: 1,
+    centerMode: true,
+    variableWidth: true,
+    autoplay:true,
+  });
 
+  $('.slick-arrow').hide();
 
 }); //jQuery end
-
