@@ -112,12 +112,12 @@
   }
 
   .center__1200 {
-    width: 1200px;
+    width: 70%;
     margin: 0 auto;
   }
 
   .center__1440 {
-    width: 1440px;
+    width: 80%;
     margin: 0 auto;
   }
 
@@ -134,3 +134,12 @@
     font-weight: var(--weight-bold);
     font-size: var(--font-title);
   }
+
+embed {
+  width:100vw;
+  height: 100vh;
+}
+
+button.slick-arrow {
+  display: none;
+}

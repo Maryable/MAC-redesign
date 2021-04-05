@@ -133,7 +133,16 @@ $("#new-left").on("click", function(){
     variableWidth: true,
     autoplay:true,
   });
-
   $('.slick-arrow').hide();
+
+  // 클릭 시 페이지 변경
+  let no = 0;
+  $('.sub').on("click", function(){
+    no=$(this).attr("id").substr(3, 1);
+    alert('h1')
+    $(".page").hide();
+    // $(".at1_bg").show();
+    $(".page"+no).show();
+})
 
 }); //jQuery end

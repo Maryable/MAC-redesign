@@ -15,14 +15,15 @@
   <link rel="stylesheet" href="./css/default.css">
   <link rel="stylesheet" href="./css/fontface.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/mobile.css">
+  <link rel="stylesheet" href="./css/mobile786.css">
   <link rel="shortcut icon" type="images/png" href="./imgs/favicon.ico">
   <!-- styles  -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script defer src="./js/main.js" ></script>
 </head>
 <body>
@@ -53,8 +54,8 @@
     <li><a href="#">컨설팅</a></li>
     <li><a href="#">맥스토리</a></li>
     <li><a href="#"><span>공식몰 단독 혜택</span></a></li>
-    <li class="mobile"><a href="#"><img src="./imgs/h_login_icon.svg" alt="login & mypage icon">  로그인/회원가입</a></li>
-    <li class="mobile"><a href="#"><img src="./imgs/h_spot_icon.svg" alt="find a store icon">  매장찾기</a></li>
+    <li class="mobile"><a href="#">로그인/회원가입</a></li>
+    <li class="mobile"><a href="#">매장찾기</a></li>
   </ul>
 
   <div class="header-wrap">
@@ -141,13 +142,13 @@
     <nav id="navbar">
       <div class="center__1200 nav__wrap">
         <ul class="nav__menu">
-          <li><a href="#"><span>신제품 컬렉션</span></a></li>
-          <li><a href="#">베스트셀러</a></li>
+          <li class="sub" id="sub0"><a href="#"><span>신제품 컬렉션</span></a></li>
+          <li class="sub" id="sub1"><a href="#">베스트셀러</a></li>
           <li class="sub-parent1"><a href="#">메이크업</a></li> 
           <li class="sub-parent2"><a href="#">스킨케어</a></li>
           <li><a href="#">컨설팅</a></li> 
           <li><a href="#">맥스토리</a></li>
-          <li><a href="#"><span>공식몰 단독</span></a></li>
+          <li class="sub" id="sub2"><a href="#"><span>공식몰 단독</span></a></li>
         </ul>
       </div> <!-- wrap center__1200  -->
   
@@ -257,7 +258,7 @@
   </div> <!-- header _ nav wrap -->
   
 
-  <section class="page0">
+  <section class="page indexPage">
     <article class="main-sldie-container">
       <!-- Swiper -->
     <div class="swiper-container main-slide">
@@ -484,7 +485,7 @@
       <ul class="promo-banner-wrap center__1440">
         <li class="promo-banner"><a href="#">
           <div class="promo__imgbox">
-            <img src="imgs/promo-banner1.jpg" alt="promotion banner">
+            <div class="imgbox"><img src="imgs/promo-banner1.jpg" alt="promotion banner"></div>
             <div class="promo___description">
               <h6>첫 구매 15% OFF</h6><hr><span>가입하기</span>
             </div>
@@ -494,7 +495,7 @@
         </a></li>
         <li class="promo-banner"><a href="#">
           <div class="promo__imgbox">
-            <img src="imgs/promo-banner2.jpg" alt="promotion banner">
+            <div class="imgbox"><img src="imgs/promo-banner2.jpg" alt="promotion banner"></div>
             <div class="promo___description">
               <h6>백 투 맥 프로모션</h6><hr><span>자세히 보기</span>
             </div>
@@ -504,9 +505,11 @@
         </a></li>
         <li class="promo-banner"><a href="#">
           <div class="promo__imgbox">
-            <img src="imgs/promo-banner3.png" alt="promotion banner">
+            <div class="imgbox">
+              <img src="imgs/promo-banner3.png" alt="promotion banner">
             <div class="promo___description">
               <h6>메이크업 컨설팅</h6><hr><span>예약하기</span>
+            </div>
             </div>
           </div>
           <p>메이크업 컨설팅</p>
@@ -514,7 +517,7 @@
         </a></li>
         <li class="promo-banner"><a href="#">
           <div class="promo__imgbox">
-            <img src="imgs/promo-banner4.jpg" alt="promotion banner">
+            <div class="imgbox"><img src="imgs/promo-banner4.jpg" alt="promotion banner"></div>
             <div class="promo___description">
               <h6>라이브 챗 어드바이저</h6><hr><span>LIVE CHAT 클릭!</span>
             </div>
@@ -551,19 +554,16 @@
           <a href="#"><img src="imgs/insta4.png" alt="instagram review"></a>
           <a href="#"><img src="imgs/insta5.png" alt="instagram review"></a>
           <a href="#"><img src="imgs/insta6.png" alt="instagram review"></a>
-          <a href="#"><img src="imgs/insta7.png" alt="instagram review"></a>
-          <a href="#"><img src="imgs/insta8.png" alt="instagram review"></a>
         </div> <!-- insta-pics -->
       </div> <!-- insta-pics-wrap  -->
     </article> <!-- hashtag event end -->
-  </section> <!-- page 0 -->
-<!-- 
-  <section class="page1">page1</section>
-  <section class="page2">page2</section>
-  <section class="page3">page3</section>
-  <section class="page4">page4</section>
-  <section class="page5">page5</section> -->
+  </section> <!-- page indexPage end -->
 
+  <section class="page page0"><embed type="text/html" src="./new-collection.html" width="100vw" height="100vh"></section>
+  <section class="page page1"><embed type="text/html" src="./best-seller.html" width="100vw" height="100vh"></section>
+  <section class="page page2">page3</section>
+  <section class="page page3">page4</section>
+  <section class="page page4">page5</section>
   <footer>
     <div class="event-banner-wrap">
       <div class="event__banner center__1200">
@@ -582,7 +582,7 @@
         <p>CONTACT US</p>
         <address>
           <a href="tel:+820269713291">02-6971-3291</a> <br>
-          <a href="USER_SUPPORT@KR.MACCOSMETICS.COM">USER_SUPPORT@KR.MACCOSMETICS.COM</a>
+          <a href="USER_SUPPORT@KR.MACCOSMETICS.COM">이메일 문의</a>
         </address>
       </div> <!-- tel -->
       <div class="cs__menu">
