@@ -1,0 +1,26 @@
+.main__title {
+  margin: 65px auto 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.main__title p {
+  font-size: var(--font-small);
+  font-weight: var(--weight-bold);
+}
+
+.benefit-wrap1 {
+  margin: 100px auto;
+}
+.benefit1{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.benefit1 li:first-child div{
+  background: url("../imgs/onlyMAC1.jpg")center/cover no-repeat;
+}
+
+.benefit1 li:last-child div{
+  background: url("../imgs/onlyMAC2.jpg")center/cover no-repeat;
+}

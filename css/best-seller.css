@@ -1,3 +1,36 @@
+:root {
+    --lip-color-YoureBuggin: #C61314;
+    --lip-color-KindaSoarta: #975054;
+    --lip-color-Werk: #BA0B08;
+    --lip-color-Tedi: #AC6259;
+    --lip-color-Brickthrough: #B65451;
+    --lip-color-BurningLove: #833744;
+    --lip-color-BubonnetBuzz: #953831;
+    --lip-color-TurnLeft: #5C362B;
+    --lip-color-SheerOutage: #DA5751;
+    --lip-color-MarrakeshMere: #A2402C;
+    --lip-color-DebotedChilly: #AF3832;
+    --lip-color-StayCurious: #BA3A39;
+    --lip-color-ALittleTamed: #C13D4A;
+    --lip-color-LastingPassion: #CD0C27;
+    --lip-color-MandarinO: #E43D45;
+    --lip-color-styleShocked: #E02F05;
+    --lip-color-shockingRevolation: #B51E3F;
+    --lip-color-fallInLove: #FB236A;
+    --lip-color-velvetPunch: #CD3669;
+    --lip-color-MullitOver: #C76864;
+    --lip-color-sultryMove: #BC554E;
+    --lip-color-myTweedy: #EAA181;
+    --lip-color-Sultriness: #D87C89;
+    --lip-color-burningLove: #933A50;
+    --lip-color-impulsive: #B26F54;
+    --lip-color-sketuedPedal: #F78C82;
+    --lip-color-sexyButSweet: #F55F8C;
+    --lip-color-lipened: #C78797;
+    --lip-color-PforPotent: #823B5B;
+    --lip-color-Reverence: #D8716A;
+}
+
 .navigator {
     width: 100%;
     height: 60px;
@@ -8,18 +41,96 @@
     width: 80%;
     margin: 0 auto;
     padding: 20px 0;
-    font-size:var(--font-regular);
+    font-size:var(--font-medium);
 } 
 
 .navigator > p > span {
     font-weight: var(--weight-heavy);
 }
 
-/* .color-chart-list {
-    
+.title {
+    width: 100%;
+    text-align: center;
+    margin: 50px 0;
 }
 
-.color-chart-list > li {
-    
-} */
+.best-seller-list {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: 1px solid brown;
+}
 
+.best-seller-list > li {
+    width: 22.2%;
+    padding: 10px;
+    outline: 1px solid salmon;
+}
+
+.color-chart {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    outline: 1px solid salmon;
+}
+.color-wrap {
+    width: 80%;
+    height: 20px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    left: 0;
+}
+.color-chart-list {
+    width: 400px;
+    position: absolute;
+    left: 0;
+    outline: 1px solid salmon;
+}
+
+.color-chart-list li {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    float: left;
+    margin: 0 4px;
+    background: var(--lip-color-shockingRevolation);
+}
+.imgBox {
+    display: block;
+    width: 100%;
+    height: 300px;
+}
+
+.imgBox img {
+    width: 100%;
+    height: 100%;
+}
+
+.item-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.itemRank {display: flex; justify-content: space-between;}
+
+.ColorName {
+    font-size: var(--font-micro);
+}
+.item-desc > p {
+    font-weight: var(--weight-regular);
+    margin: 5px 0;
+}
+.item-desc > p:nth-child(3) {
+    font-weight: var(--weight-bold);
+}
+.item-desc > p > span {
+    font-weight: var(--weight-bold);
+}

@@ -154,6 +154,7 @@ p.just-in-title {
 
 }
 
+/* 
 @media  screen and (max-width:768px) {
     .just-in {
         margin: 80px 0;
@@ -169,4 +170,4 @@ p.just-in-title {
         transition:all 1.5s;
     }
 
-}
+} */

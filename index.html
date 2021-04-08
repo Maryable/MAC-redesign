@@ -15,10 +15,8 @@
   <link rel="stylesheet" href="./css/default.css">
   <link rel="stylesheet" href="./css/fontface.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="./css/mobile.css">
-  <link rel="stylesheet" href="./css/mobile786.css">
   <link rel="shortcut icon" type="images/png" href="./imgs/favicon.ico">
   <!-- styles  -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -27,37 +25,6 @@
   <script defer src="./js/main.js" ></script>
 </head>
 <body>
-  <!-- header for mobile -->
-  <div class="mobile__header">
-    <div class="leftSide">
-      <div class="hamburger__bar">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <a href="#"><img src="./imgs/h_cart_icon.svg" alt="my cart icon"></a>
-    </div>
-    <div><a href="index.html"><img src="./imgs/Mac_cosmetics_logo.svg" alt="Logo" class="m_logo"></a></div>
-    <div class="mobile__icon">
-      <div class="search__box search__box__mobile">
-        <input type="search" class="search__txt" placeholder="검색">
-        <a class="search__btn" href="#"><img src="./imgs/h_search_icon.svg" alt="search icon"></a>
-      </div> <!-- search__box -->
-    </div> <!-- mobile__icon -->
-  </div> <!-- mobile__header -->
-  <ul class="nav__menu__mobile">
-    <li></li>
-    <li><a href="#"><span>신제품 컬렉션</span></a></li>
-    <li><a href="#">베스트셀러</a></li>
-    <li><a href="#">메이크업</a></li>
-    <li><a href="#">스킨케어</a></li>
-    <li><a href="#">컨설팅</a></li>
-    <li><a href="#">맥스토리</a></li>
-    <li><a href="#"><span>공식몰 단독 혜택</span></a></li>
-    <li class="mobile"><a href="#">로그인/회원가입</a></li>
-    <li class="mobile"><a href="#">매장찾기</a></li>
-  </ul>
-
   <div class="header-wrap">
     <header>
       <!-- header for webpage -->
@@ -108,7 +75,7 @@
                   </div>
                   <div class="pop-cart-bottom">
                     <p>총 금액 &nbsp; ￦ 117,000</p>
-                    <a href="#">장바구니 보기</a>
+                    <a href="#" class="sub" id="sub4">장바구니 보기</a>
                     <a href="#">반품 및 배송정보 보기</a>
                     <div class="pop-cart-ad">
                       <img src="imgs/pop-cart-ad.png" alt="pop up cart advertisement">
@@ -199,7 +166,7 @@
             <li><a href="#">롱웨어 스튜디오</a></li>
             <li><a href="#">립스틱 TOP 20</a></li>
           </ul> <!-- sub-list end -->
-        </div> <!-- submenu -->
+        </div> <!-- skin care submenu -->
       </div>
       <div class="makeup-sub-wrap sub-wrap">
         <div class="sub__menu center__1200">
@@ -252,7 +219,7 @@
             <li><a href="#">아이 브러시</a></li>
             <li><a href="#">전체보기</a></li>
           </ul> <!-- sub-list end -->
-        </div> <!-- submenu -->
+        </div> <!-- make up submenu -->
       </div>
     </nav>
   </div> <!-- header _ nav wrap -->
@@ -282,7 +249,7 @@
     </article> <!-- main slide container end -->
 
     <article class="main-new-collection center__1440 margin150">
-      <div class="main-new-collction-btn">
+      <div class="main-new-collction-btn center__1200">
         <button id="new-left"><i class="xi-angle-left-thin"></i></button>
         <button id="new-right"><i class="xi-angle-right-thin"></i></button>
       </div> <!-- main-new-collction-btn -->
@@ -290,7 +257,7 @@
         <h6>만개한 벚꽃이 흐드러지는 <span>블랙체리컬렉션</span></h6>
         <ul class="new-collection-imgs">
           <li> <!-- item1 -->
-            <a href="#"><img src="imgs/main-collection01.png" alt="black cherry collection lipstic"></a>
+            <a href="#" class="sub" id="sub3"><img src="imgs/main-collection01.png" alt="black cherry collection lipstic"></a>
             <div class="collection-desc">
               <p>입술에 가볍게 밀착되는 <br /> 세 가지 소프트 컬러</p>
               <h4>매트 립스틱</h4>
@@ -349,13 +316,13 @@
         </div><!-- tab menu button -->
         <div class="best-tab-wrap">
           <div class="tab-menu-btn">
-            <button class="best-left"><i class="xi-angle-left-thin"></i></button>
-            <button class="best-right"><i class="xi-angle-right-thin"></i></button>
+            <button id="best-left"><i class="xi-angle-left-thin"></i></button>
+            <button id="best-right"><i class="xi-angle-right-thin"></i></button>
           </div>
           <!-------------------------- best-seller container -->
         <ul class="tab-menu-list best-seller-imgs">
           <li> <!-- item1 -->
-            <a href="#"><img src="imgs/best_seller_1.png" alt="best seller item">
+            <a href="./lipstic_detail.html"><img src="imgs/best_seller_1.png" alt="best seller item">
               <div class="best-seller-desc">
                 <p>파우더 키스 립스틱</p>
                 <h4><span>￦</span> 32,000</h4>
@@ -471,17 +438,17 @@
           <div class="slide-dim slide-dim-center"></div>
           <div class="slide-dim slide-dim-right"></div>
         </div>
-        <aside class="full-slide">
-          <div><a href="#"><img src="imgs/new collection0.png" alt="new collction"></a></div>
-          <div><a href="#"><img src="imgs/new collection1.png" alt="new collction"></a></div>
-          <div><a href="#"><img src="imgs/new collection2.png" alt="new collction"></a></div>
-          <div><a href="#"><img src="imgs/new collection3.png" alt="new collction"></a></div>
-          <div><a href="#"><img src="imgs/new collection4.png" alt="new collction"></a></div>
+        <aside id="full-slide">
+          <div><a href="#"><img src="imgs/new-collection0.png" alt="new collction"></a></div>
+          <div><a href="#"><img src="imgs/new-collection1.png" alt="new collction"></a></div>
+          <div><a href="#"><img src="imgs/new-collection2.png" alt="new collction"></a></div>
+          <div><a href="#"><img src="imgs/new-collection3.png" alt="new collction"></a></div>
+          <div><a href="#"><img src="imgs/new-collection4.png" alt="new collction"></a></div>
         </aside>
       </div>
     </article> <!-- new-collection-full-slide -->
 
-    <article class="margin150">
+    <article class="margin150 promotion" >
       <ul class="promo-banner-wrap center__1440">
         <li class="promo-banner"><a href="#">
           <div class="promo__imgbox">
@@ -528,42 +495,42 @@
       </ul>
     </article> <!-- promotion banner end -->
 
-    <article class="hashtag-wrap margin150 center__1440">
+    <article class="hashtag-wrap margin150 center__1200">
       <div class="hashtag-desc">
         <span>@MACCOSMETICSKOREA</span>
         <h6>#MACCOSMETICS Brag your skills</h6>
         <p>사진에 #MACCOSMETICS를 태그하여 당신의 멋진 메이크업 스킬을 보여주세요. 맥 공식몰에 소개 될 수 있습니다! </p>
         </div>
-      <div class="insta-pics-wrap center__1440">
+      <div class="insta-pics-wrap center__1200">
         <div class="instagram-form">
           <a href="#">
             <div class="insta__avatar">
-              <img src="imgs/insta-mac-lover-avatar.png" alt="mac lover avatar">
+              <img src="./imgs/insta-mac-lover-avatar.png" alt="mac lover avatar">
               <span>_maclover21</span>
             </div> <!-- insta__avatar -->
-            <img src="imgs/insta-mac-lover.jpg" alt="mac lover instagram">
+            <div class="instacont_img"></div>
             <p class="insta__like"><i class="xi-heart-o"></i> 좋아요 1,365개</p>
             <p class="insta__comment"><span>_maclover21</span> #MAC 레알 MLBB맛집 ㅇㅈ☜(ﾟヮﾟ☜)</p>
             <p class="hashtag">@maccosmeticskorea #MACPowderKiss</p>
           </a>
         </div> <!-- instagram-form -->
-        <div class="insta-pics">
-          <a href="#"><img src="imgs/insta1.png" alt="instagram review"></a>
-          <a href="#"><img src="imgs/insta2.png" alt="instagram review"></a>
-          <a href="#"><img src="imgs/insta3.png" alt="instagram review"></a>
-          <a href="#"><img src="imgs/insta4.png" alt="instagram review"></a>
-          <a href="#"><img src="imgs/insta5.png" alt="instagram review"></a>
-          <a href="#"><img src="imgs/insta6.png" alt="instagram review"></a>
-        </div> <!-- insta-pics -->
+        <div class="insga_thumb insga_thumb1"><a href="#"></a></div> 
+        <div class="insga_thumb insga_thumb2"><a href="#"></a></div>
+        <div class="insga_thumb insga_thumb3"><a href="#"></a></div>
+        <div class="insga_thumb insga_thumb4"><a href="#"></a></div>
+        <div class="insga_thumb insga_thumb5"><a href="#"></a></div>
+        <div class="insga_thumb insga_thumb6"><a href="#"></a></div>
+        <div class="insga_thumb insga_thumb7"><a href="#"></a></div>
+        <div class="insga_thumb insga_thumb8"><a href="#"></a></div>
       </div> <!-- insta-pics-wrap  -->
     </article> <!-- hashtag event end -->
   </section> <!-- page indexPage end -->
 
-  <section class="page page0"><embed type="text/html" src="./new-collection.html" width="100vw" height="100vh"></section>
-  <section class="page page1"><embed type="text/html" src="./best-seller.html" width="100vw" height="100vh"></section>
-  <section class="page page2">page3</section>
-  <section class="page page3">page4</section>
-  <section class="page page4">page5</section>
+  <section class="page page0"><embed type="text/html" src="./new-collection.html" width="100vw" height="100vh" alloewfullscreen></section>
+  <section class="page page1"><embed type="text/html" src="./best-seller.html" width="100vw" height="100vh" allowfullscreen></section>
+  <section class="page page2">공식몰 단독</section>
+  <section class="page page3"><embed type="text/html" src="./lipstic_detail.html" width="100vw" height="100vh" alloewfullscreen></section>
+  <section class="page page4">장바구니</section>
   <footer>
     <div class="event-banner-wrap">
       <div class="event__banner center__1200">
@@ -582,7 +549,7 @@
         <p>CONTACT US</p>
         <address>
           <a href="tel:+820269713291">02-6971-3291</a> <br>
-          <a href="USER_SUPPORT@KR.MACCOSMETICS.COM">이메일 문의</a>
+          <a href="USER_SUPPORT@KR.MACCOSMETICS.COM">USER_SUPPORT@KR.MACCOSMETICS.COM</a>
         </address>
       </div> <!-- tel -->
       <div class="cs__menu">
@@ -621,6 +588,11 @@
         호스팅서비스 사업자: ㈜엘지유플러스</P>
     </div>
   </footer>
+  
+  <!-- arrow up to the top -->
+  <button class="arrow-up">
+    <i class="xi-arrow-up"></i>
+</button>
 
 </body>
 </html>

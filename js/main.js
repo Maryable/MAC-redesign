@@ -1,3 +1,17 @@
+
+// show "arrow-up" button when scrolling down
+const home = document.querySelector('.main-sldie-container');
+const homeHeight = home.getBoundingClientRect().height;
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll', () => {
+  if(window.scrollY> homeHeight / 2) {
+    arrowUp.classList.add('visible');
+  } else {
+    arrowUp.classList.remove('visible');
+  }
+});
+
+
 $(function(){
   //when window width===1198, show mobile header
   $('.nav__menu__mobile').hide();
@@ -67,26 +81,26 @@ $(function(){
   $("#new-right").on("click", function(){
     if(count<3){
         count++;
-        $('.new-collection-imgs').animate({'left':'-=400px'},500);
+        $('.new-collection-imgs').animate({'left':'-=370px'},500);
     } 
-});
+  });
 
-$("#new-left").on("click", function(){
-  if(count>0){
-      count--;
-      $('.new-collection-imgs').animate({'left':'+=400px'},500);
-  } 
-});
+  $("#new-left").on("click", function(){
+    if(count>0){
+        count--;
+        $('.new-collection-imgs').animate({'left':'+=370px'},500);
+    } 
+  });
 
   // best seller slide
-  $('.best-right').on("click", function(){
-    if(count < 3){
+  $('#best-right').on("click", function(){
+    if(count < 4){
         count++;
         $('.best-seller-imgs').animate({'left':'-=390px'},500);
       } 
   });
 
-  $('.best-left').on("click", function(){
+  $('#best-left').on("click", function(){
     if(count > 0){
         count--;
         $('.best-seller-imgs').animate({'left':'+=390px'},500);
@@ -95,7 +109,7 @@ $("#new-left").on("click", function(){
 
     // must have slide
     $('.must-right').on("click", function(){
-      if(count < 3){
+      if(count < 4){
           count++;
           $('.must-have-imgs').animate({'left':'-=390px'},500);
         } 
@@ -124,7 +138,7 @@ $("#new-left").on("click", function(){
     $('.best-seller-imgs').css("opacity","0");
   });
 
-  $('.full-slide').slick({
+  $('#full-slide').slick({
     dots: true,
     infinite: true,
     speed: 400,
@@ -133,16 +147,20 @@ $("#new-left").on("click", function(){
     variableWidth: true,
     autoplay:true,
   });
+
   $('.slick-arrow').hide();
 
   // 클릭 시 페이지 변경
   let no = 0;
   $('.sub').on("click", function(){
     no=$(this).attr("id").substr(3, 1);
-    alert('h1')
+    alert(no)
     $(".page").hide();
     // $(".at1_bg").show();
     $(".page"+no).show();
-})
+
+});
+
+
 
 }); //jQuery end

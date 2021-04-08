@@ -11,8 +11,6 @@ header {
   background: var(--color-black);
 }
 
-.mobile__header {display: none;}
-
 .wrap {
   display: flex;
   justify-content: space-between;
@@ -425,7 +423,7 @@ font-size: var(--font-thin);
   background: var(--color-light-white);
 }
 
-/* -----------------------------------body */
+/* ----------------------------------- body */
 .page {
   display: none;
   margin-top: 130px;
@@ -436,7 +434,7 @@ font-size: var(--font-thin);
 }
 
 .swiper-container {
-  width: 100%; 
+  width: 80%; 
   overflow: hidden;
   margin: 0 auto;
 }
@@ -457,13 +455,17 @@ font-size: var(--font-thin);
   border-radius: 26px;
 }
 
-/* --------------------main-new-collciont */
+/* -------------------------main-new-collciont */
 .main-new-collection, tab-menu-container {
   position: relative;
+  background-color: #fff;
+  margin: 150px auto;
 }
 
 .new-slide-container {
   overflow: hidden;
+  width: 1200px;
+  height: 500px;
 }
 .new-slide-container> h6 {
   font-weight: var(--weight-black);
@@ -474,18 +476,26 @@ font-size: var(--font-thin);
 }
 
 .new-collection-imgs {
-  width: 2200px;
+  width: 2300px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: relative;
 }
 .new-collection-imgs > li {
   width: 350px;
+  height: 100%;
 }
-.new-collection-imgs > li img {
+
+.new-collection-imgs > li:first-child {
+  margin-left: 1.8%;
+}
+
+.new-collection-imgs > li > a > img {
   width: 100%;
 }
 .collection-desc {
+  height: 80px;
   text-align: center;
   font-size: var(--font-small);
 }
@@ -493,25 +503,28 @@ font-size: var(--font-thin);
 .collection-desc > h4 {
   font-size: var(--font-medium);
   font-weight: var(--weight-bold);
-  margin: 15px 0 35px 0;
+  margin: 5px auto;
 }
 .collection-desc > p {
-  padding: 0 70px;
+  width: 100%;
+  height: 50px;
+  font-size: var(--font-extrasmall);
 }
 
 .collection-desc > a {
-  font-size: var(--font-extrasmall);
+  font-size: var(--font-micro);
   color: var(--color-dark-white);
   text-decoration: underline;
 }
 
 .main-new-collction-btn {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   position: absolute;
+  z-index: 6;
   top: 50%;
-  left: 0;
+  left: 5%;
   transform: translateY(-50%);
 }
 
@@ -523,9 +536,10 @@ font-size: var(--font-thin);
 /* ------------------best-seller & must-have */
 .best-tab-wrap {
   position: relative;
-  width: 1200px;
-  height: 450px;
+  margin: auto;
+  height: 420px;
   overflow: hidden;
+  outline: 1px solid slateblue;
 }
 
 .best-tab-btn{
@@ -547,21 +561,28 @@ font-size: var(--font-thin);
 }
 
 .tab-menu-list {
-  width: 2400px;
+  width: 2200px;
   height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1.8%;
   position: absolute;
   top: 0;
   left: 0;
-  display: flex;
-  justify-content: space-between;
+  outline: 1px solid slateblue;
   background: var(--color-white);
 }
 
 .tab-menu-list > li {
-  flex:1;
+  width: 350px;
   height: 100%;
   text-align: center;
+  outline: 1px solid slateblue;
   background: var(--color-white);
+}
+
+.tab-menu-list > li > a > img {
+  width: 100%;
 }
 
 .tab-menu-btn {
@@ -572,6 +593,7 @@ font-size: var(--font-thin);
   width:100%;
   z-index: 5;
   top: 50%;
+  transform: translateY(-50%);
 }
 
 .tab-menu-btn > button > i {
@@ -588,10 +610,12 @@ font-size: var(--font-thin);
   font-size: var(--font-small);
   font-weight: var(--font-thin);
 }
+
 .best-seller-desc > h4 {
   font-size: var(--font-small);
   font-weight: var(--weight-bold);
 }
+
 .best-seller-desc > h4 >span {
   font-size: var(--font-regular);
   font-weight: var(--weight-heavy);
@@ -607,7 +631,7 @@ font-size: var(--font-thin);
 }
 
 .slide-dim-left, .slide-dim-right {
-  width: 360px;
+  width: 600px;
   background-color: rgba(0,0,0,0.6);
 }
 
@@ -673,6 +697,7 @@ button.slick-arrow {
 }
 
 /* ----------------------promotion banner */
+
 .promo-banner-wrap {
   display: flex;
   justify-content: space-between;
@@ -681,7 +706,7 @@ button.slick-arrow {
 
 .promo-banner {
   text-align: center;
-  width: 350px;
+  width: 25%;
 }
 
 .promo-banner > a > p {
@@ -699,8 +724,7 @@ button.slick-arrow {
 }
 .promo__imgbox {
   position: relative;
-  width: 350px;
-  height: 360px;
+  margin-top: 10px;
   margin-right: 10px;
 }
 .promo__imgbox:last-child {
@@ -715,7 +739,6 @@ button.slick-arrow {
 .promo___description {
   position: absolute;
   top: 0;
-  left: 0;
   background-color: rgba(0,0,0,0.8);
   display: flex;
   flex-direction: column;
@@ -750,19 +773,18 @@ button.slick-arrow {
 }
 
 /* ----------------- hash tag event */
+.insta-pics-wrap {
+  width: 100%;
+  height: fit-content;
+  margin-top: 24px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
+}
 
 .hashtag-desc {
   width: 100%;
   text-align: center;
-}
-
-.insta-pics-wrap {
-  width: 80%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  margin-top: 24px;
 }
 
 .hashtag-desc > span {
@@ -786,30 +808,71 @@ button.slick-arrow {
   color: var(--color-light-black);
 }
 
-.insta__avatar {
-  display: flex;
-  padding: 5px 10px;
-  align-items: center;
-}
-.insta__avatar > span {
-  margin-left: 20px;
-  font-weight: var(--weight-bold);
-  font-size: var(--font-regular);
-}
-
-.insta-pics {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-}
-
 .instagram-form {
-  grid-column-start: 1;
-  grid-column-end: 2;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  width: 350px;
   font-size: var(--font-extrasmall);
   font-weight: var(--font-regular);
+  padding: 8px 0;
   border: 1px solid var(--color-light-white);
 }
+
+.instacont_img {
+  width: 100%;
+  height: 360px;
+  margin-bottom: 8px;
+  background: url("../imgs/insta-mac-lover.jpg") center/cover no-repeat;
+}
+.insga_thumb{object-fit: contain;}
+
+.insga_thumb1 {
+  grid-column: 5/6;
+  grid-row: 2/3;
+  background: url("../imgs/insta1.png") center/cover no-repeat;
+}
+.insga_thumb2 {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  background: url("../imgs/insta2.png") center/cover no-repeat;
+}
+
+.insga_thumb3 {
+  grid-column: 4/5;
+  grid-row: 1/2;
+  background: url("../imgs/insta3.png") center/cover no-repeat;
+}
+
+.insga_thumb4 {
+  grid-column: 5/6;
+  grid-row: 1/2;
+  background: url("../imgs/insta4.png") center/cover no-repeat;
+}
+
+.insga_thumb5 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background: url("../imgs/insta5.png") center/cover no-repeat;
+}
+
+.insga_thumb6 {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  background: url("../imgs/insta6.png") center/cover no-repeat;
+}
+
+.insga_thumb7 {
+  grid-column: 4/5;
+  grid-row: 2/3;
+  background: url("../imgs/insta7.png") center/cover no-repeat;
+}
+
+.insga_thumb8 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  background: url("../imgs/insta8.png") center/cover no-repeat;
+}
+
 
 .instagram-form > p:nth-child(1) {
   margin: 10px 0;
@@ -817,24 +880,28 @@ button.slick-arrow {
 
 .insta__like {
   font-weight: var(--font-extrabold);
-  padding: 10px;
+  padding: 0 8px;
 }
 .insta__like > i {
   font-size: var(--font-regular);
 }
 .insta__comment {
   font-weight: var(--font-extrabold);
-  padding: 0 8px;
+  padding: 0 5px;
 }
 .insta__comment > span {
   font-weight: var(--weight-extrabold);
   font-size: var(--font-extrasmall);
-  padding: 0 10px;
+}
+.insta__avatar {
+  display: flex; 
+  align-items: center; 
+  padding: 8px;
 }
 
 .hashtag {
   color: var(--color-hashtag);
-  padding: 0 10px;
+  padding: 0 8px;
 }
 
 /* ---------------------------------foooter */
@@ -843,15 +910,16 @@ footer {
   width: 100%;
   background: var(--color-dark-black);
 }
+
 .event-banner-wrap {
   width: 100%;
-  height: 50px;
+  padding: 10px;
   background-color: var(--color-black);
 }
 .event__banner a {
-  height: 56px;
   color: var(--color-dark-white);
 }
+
 .event__banner {
   height: 100%;
   display: flex;
@@ -868,7 +936,7 @@ footer {
 }
 
 .cs__service{
-  height: 250px;
+  margin: 50px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -881,11 +949,13 @@ footer {
 
 .tel > address {
   margin-top: 20px;
+  font-style:normal;
 }
 
 .tel > address > a:nth-child(1) {
   font-size: var(--font-medium);
   color: var(--color-light-white);
+  font-weight: var(--weight-extrabold);
 }
 
 .tel > address > a:last-child {
@@ -910,11 +980,37 @@ footer {
 }
 
 .about__company {
-  height: 60px;
+  padding: 20px;
 }
 
 .about__company > p {
+  
   font-size: var(--font-micro);
   color: #454545;
   letter-spacing: 1px;
+}
+
+
+
+/* Scroll arrow up button */
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 60px;
+  height: 60px;
+  font-size: 40px;
+  line-height: 40px;
+  background: #000000;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 300ms ease-in;
+}
+.arrow-up i {
+  color:var(--color-white);
+}
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
