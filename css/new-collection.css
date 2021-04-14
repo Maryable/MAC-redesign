@@ -1,11 +1,14 @@
+.new-collection-wrap {
+    margin: 100px auto;
+}
+
 .just-in {
     width: 100%;
     height: 100%;
-    margin-bottom: 80px;
 }
 
 .title {
-    margin: 60px auto;
+    margin-bottom: 60px;
 }
 
 h2, p {
@@ -14,7 +17,7 @@ h2, p {
 }
 
 .new-coll-items {
-    width: 80%;
+    width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 28%;
@@ -25,14 +28,14 @@ h2, p {
 }
 
 p.just-in-title {
-    font-size: var(--font-large);
+    font-size: var(--font-medium);
     font-weight:var(--weight-bold);
     margin: 10px 0;
     text-align: left;
 }
 
 .just-in-title {
-    font-size: var(--font-extrasmall);
+    font-size: var(--font-regular);
     font-weight:var(--weight-light);
     margin-bottom: 10px;
 }
@@ -46,6 +49,9 @@ p.just-in-title {
     width: 100%;
 }
 
+.just-in-desc{
+    font-size: var(--font-extrasmall);
+}
 .just-in-hover {
     display: none;
     position: absolute;
@@ -63,6 +69,7 @@ p.just-in-title {
     text-align: right;
     font-size: var(--font-large);
 }
+
 .just-in-button {
     width: 100%;
     height: 100%;
@@ -71,6 +78,7 @@ p.just-in-title {
     justify-content:center;
     align-items: center;
 }
+
 .just-in-button a {
     display: block;
     margin: 18px 0;
@@ -96,78 +104,3 @@ p.just-in-title {
 .new-coll-items li:hover .just-in-button{
     transform:rotateY(180deg);
 }
-
-@media  screen and (max-width:1198px) {
-    .just-in {
-        margin: 100px 0;
-    }
-        
-    h2, p {
-        width: 100%;
-        text-align: center;
-    }
-    
-    
-    p.just-in-title {
-        font-size: var(--font-medium);
-    }
-    
-    .just-in-title {
-        font-size: var(--font-micro);
-        font-weight:var(--weight-thin);
-        margin-bottom: 10px;
-    }
-    
-    .new-coll-items > li{
-        position: relative;
-    }
-    .new-coll-items > li > a {
-        backface-visibility: hidden;
-    }
-    .new-coll-items > li > a > img {
-        width: 100%;
-    }
-    
-    .just-in-hover {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.8);
-        color: var(--color-dark-white);
-        padding: 30px;
-    }
-    
-    .just-in-hover > i {
-        width: 100%;
-        text-align: right;
-        font-size: var(--font-medium);
-    }
-
-    .just-in-button a {
-        display: block;
-        margin: 10px 0;
-        padding: 8px 24px;
-    }
-
-}
-
-/* 
-@media  screen and (max-width:768px) {
-    .just-in {
-        margin: 80px 0;
-    }
-    .new-coll-items {
-        width: 80%;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        grid-gap: 20px;
-        transition:all 1.5s;
-    }
-
-} */

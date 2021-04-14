@@ -1,36 +1,6 @@
-:root {
-    --lip-color-YoureBuggin: #C61314;
-    --lip-color-KindaSoarta: #975054;
-    --lip-color-Werk: #BA0B08;
-    --lip-color-Tedi: #AC6259;
-    --lip-color-Brickthrough: #B65451;
-    --lip-color-BurningLove: #833744;
-    --lip-color-BubonnetBuzz: #953831;
-    --lip-color-TurnLeft: #5C362B;
-    --lip-color-SheerOutage: #DA5751;
-    --lip-color-MarrakeshMere: #A2402C;
-    --lip-color-DebotedChilly: #AF3832;
-    --lip-color-StayCurious: #BA3A39;
-    --lip-color-ALittleTamed: #C13D4A;
-    --lip-color-LastingPassion: #CD0C27;
-    --lip-color-MandarinO: #E43D45;
-    --lip-color-styleShocked: #E02F05;
-    --lip-color-shockingRevolation: #B51E3F;
-    --lip-color-fallInLove: #FB236A;
-    --lip-color-velvetPunch: #CD3669;
-    --lip-color-MullitOver: #C76864;
-    --lip-color-sultryMove: #BC554E;
-    --lip-color-myTweedy: #EAA181;
-    --lip-color-Sultriness: #D87C89;
-    --lip-color-burningLove: #933A50;
-    --lip-color-impulsive: #B26F54;
-    --lip-color-sketuedPedal: #F78C82;
-    --lip-color-sexyButSweet: #F55F8C;
-    --lip-color-lipened: #C78797;
-    --lip-color-PforPotent: #823B5B;
-    --lip-color-Reverence: #D8716A;
+p, h3, h2,h5 {
+    cursor: default;
 }
-
 .navigator {
     width: 100%;
     height: 60px;
@@ -38,99 +8,174 @@
 }
 
 .navigator > p {
-    width: 80%;
+    width: 1200px;
     margin: 0 auto;
-    padding: 20px 0;
-    font-size:var(--font-medium);
+    padding: 10px 0;
+    font-size:var(--font-regular);
+    font-weight: var(--weight-bold);
 } 
 
-.navigator > p > span {
-    font-weight: var(--weight-heavy);
+.navigator > p > button {
+    font-size: var(--font-small);
+    font-weight: var(--weight-regular);
+    padding: 10px 20px;
+}
+
+.navigator > p > button:hover {
+    font-weight: var(--weight-extrabold);
+    text-decoration: underline;
 }
 
 .title {
     width: 100%;
     text-align: center;
-    margin: 50px 0;
+    margin: 80px auto 120px auto;
+}
+
+section {margin: 180px auto;}
+
+.section-title {
+    width: 100%;
+    text-align: center;
+    margin: 60px auto;
 }
 
 .best-seller-list {
-    width: 80%;
-    margin: 0 auto;
+    width: 1200px;
+    /* height: 1000px; */
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    outline: 1px solid brown;
+    flex-wrap:wrap;
+    margin: 0 auto;
 }
 
-.best-seller-list > li {
-    width: 22.2%;
-    padding: 10px;
-    outline: 1px solid salmon;
+.best-seller-list > li.best-items {
+    width: 280px;
+    margin-bottom: 100px;
+    transition: all var(--animation-duration);
 }
 
-.color-chart {
+.onhover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 5px rgba(141, 141, 141, 0.2);
+}
+
+.itemRank {
     width: 100%;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    overflow: hidden;
-    outline: 1px solid salmon;
-}
-.color-wrap {
-    width: 80%;
-    height: 20px;
-    overflow: hidden;
-    margin: 0 auto;
-    position: relative;
-    left: 0;
-}
-.color-chart-list {
-    width: 400px;
-    position: absolute;
-    left: 0;
-    outline: 1px solid salmon;
+    margin: 10px 0;
+    padding: 0 10px;
 }
 
-.color-chart-list li {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    float: left;
-    margin: 0 4px;
-    background: var(--lip-color-shockingRevolation);
+.best-items span {
+    font-size: var(--font-extrasmall);
 }
+
+
 .imgBox {
-    display: block;
     width: 100%;
-    height: 300px;
 }
 
-.imgBox img {
+.imgBox img{
     width: 100%;
-    height: 100%;
 }
 
-.item-desc {
+.best__bottom {
+    width: 100%;
+    height: 170px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    width: 100%;
+    justify-content: space-around;
 }
 
-.itemRank {display: flex; justify-content: space-between;}
+.item-descs {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
 
-.ColorName {
+.color-wrap {
+    width: 100%;
+    height: 80px;
+    padding: 5px;
+    text-align: center;
+}
+
+/* 전체 제품 이름, 가격 폰트 set */
+.color-wrap h5 {
+    font-size: var(--font-extrasmall); 
+    padding: 6px 0;
+}
+
+.color-wrap p {
+    font-size: var(--font-micro);
+    color: var(--color-light-black)
+}
+.item-descs p{ 
+    font-size: var(--font-regular); 
+    font-weight: var(--weight-heavy);
+    padding: 6px 0 0 0;
+}
+.item-descs p:nth-child(2) {
+    font-size: var(--font-small);
+}
+.item-descs p:nth-child(2) span {
+    font-weight: var(--weight-light);
+}
+
+.sale__price {
     font-size: var(--font-micro);
 }
-.item-desc > p {
-    font-weight: var(--weight-regular);
-    margin: 5px 0;
+
+.sale__price > span:nth-child(1) {
+    text-decoration: line-through;
+    color: var(--color-gray);
 }
-.item-desc > p:nth-child(3) {
-    font-weight: var(--weight-bold);
+
+.sale__price > b {
+    color:red;
 }
-.item-desc > p > span {
-    font-weight: var(--weight-bold);
+
+/* 컬러 non-slide 크기 */
+.swatches {
+    width:100%;
+    height: 18px;
+}
+
+/* 글로우 플레이 립 밤 */
+.glow_color {display: flex; width: 100%; height: 15px;}
+.color_name0{color: #F83313;}
+.glow_color div {
+    width: 20%;
+    height: 100%;
+    cursor: pointer;
+    transition: all var(--animation-duration);
+}
+.glow_color div:hover {
+    transform: scale(1.1);
+    border: 1px solid black;
+}
+
+/* ------------best-seller banner section */
+.best__seller__banner {
+    width: 100%; height: 413px;
+    background: url("../imgs/bestseller/bestBanner.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    cursor: default;
+}
+
+.best_banner_desc a {
+    display: block;
+    margin: 10px 0;
+    padding: 5px;
+    text-decoration: underline;
 }

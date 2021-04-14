@@ -12,7 +12,7 @@
     --color-light-orange: #FFD18C;
   
     /* Font size */
-    --font-title: 32px;
+    --font-title: 28px;
     --font-large: 24px;
     --font-medium: 20px;
     --font-regular: 18px;
@@ -41,17 +41,9 @@
 
 
   /* Typography */
-h2 {
+h2, h3 {
 /* for the sections and articles titles */
   font-size: var(--font-title);
-  font-weight: var(--weight-bold);
-  color: var(--color-black);
-  margin: 8px 0;
-}
-
-h3 {
-  /* best seller page title */
-  font-size: 40px;
   font-weight: var(--weight-bold);
   color: var(--color-black);
   margin: 8px 0;
@@ -81,13 +73,8 @@ h6 {
 
 
   /* universal tags */
-body {
-  font-family: "S-CoreDream-3Light", "Raleway";
-  cursor: auto;
-  overflow-x: hidden;
-}
-
 * {
+  font-family: "S-CoreDream-3Light", "Raleway";
   margin: 0;
   padding: 0;
   list-style: none;
@@ -112,6 +99,7 @@ img {
   display: block;
 }
 
+/* basic layout setting */
 .center__1200 {
   width: 1200px;
   margin: 0 auto;
@@ -130,15 +118,14 @@ header, section, footer {
   margin-top: 150px;
 }
 
+.margin130 {
+  margin-top: 130px;
+}
+
 .Eng-title {
   font-family: 'Raleway';
   font-weight: var(--weight-bold);
   font-size: var(--font-title);
-}
-
-embed,iframe {
-  width:100vw;
-  height: 100vh;
 }
 
 button.slick-arrow {
@@ -147,4 +134,35 @@ button.slick-arrow {
 
 .hidden {
   visibility: hidden;
+}
+
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both
+}
+
+/* -------------- click me !!  */
+.clickme {
+  font-family: 'Raleway';
+  font-size: var(--font-regular);
+  font-weight: var(--weight-light);
+  background: rgb(236, 120, 120);
+  padding: 8px 12px;
+  color: #fff;
+  border-radius: 4px;
+  position: relative;
+}
+
+.clickme::before {
+	position: absolute;
+	content: '';
+	width:0;
+	height: 0;
+	border: 8px solid transparent;
+	border-top-color:rgb(236, 120, 120);
+	left: 50%;
+  transform: translateX(-50%);
+	bottom: -16px;
 }

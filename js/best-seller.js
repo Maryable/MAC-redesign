@@ -1,54 +1,107 @@
-const itemList= {
-  "lip_text":["유어 버긴', 레이디 ","카인다 쏘어-타","웍, 웍, 웍","테디 2.0","브릭쓰루", 
-  "듀보넷 버즈","턴 투 더 레프트","쉬어 아웃트레지", "마라케쉬-미어", "디보티드 투 칠리", 
-  "스테이 큐리어스","어 리틀 템드","래스팅 패션", "만다린 오","스타일 쇼크드!",
-  "쇼킹 레블레이션","폴 인 러브", "벨벳 펀치","멀 잇 오버", "설트리 무브", "마이 트위디", 
-  "서트리니스","버닝 러브", "임펄시브","스캐터드 페탈", "섹시, 벗 스위트","라이픈드",
-  "피 포 포텐트", "레버런스"
-  ],
+'use strict'
 
-  "lip_pallet":["#C61314","#975054","#BA0B08","#AC6259","#B65451", 
-  "#953831","#5C362B","#DA5751", "#A2402C", "#AF3832", 
-  "#BA3A39","#C13D4A","#CD0C27", "#E43D45","#E02F05",
-  "#B51E3F","#FB236A", "#CD3669","#C76864", "#BC554E", "#EAA181", 
-  "#D87C89","#833744", "#B26F54","#F78C82", "#F55F8C","#C78797",
-  "#823B5B", "#D8716A"
-  ],
-
-  "best_img":[
-    "best_seller_page1.jpg","best_seller_page2.jpg","best_seller_page3.jpg",
-    "best_seller_page4.jpg","best_seller_page5.jpg","best_seller_page6.jpg"
-  ],  
+const imgs = {
+  "lip" : ["best01.jpg", "best02.jpg","best03.jpg", "best04.jpg", "best05.jpg"],
 }
 
 $(function(){
-  let no=0;
-  $(".next").on("click",function(){
-    if(no<3){
-        no++;
-        $(".color-chart-list").animate({"left":"-=40px"},200);
-      }
+  // 색상 클릭시 해당 색상의 이름으로 변경, 
+  //색상 이름으로 텍스트 변경
+  $(".glow_color > div").click(function(){
+  let swatch = $(this);
+  let name = swatch.attr("data-name");
+  let hex = swatch.attr("data-color");
+  let color = $(".color_name0");
+  color.css("color", hex);
+  color.text(name);
+  
+  // 해당 색상의 컬러 이미지로 변경
+  let no=$(this).index();
+  $(".imgBox0 img").attr("src", "../imgs/bestseller/"+imgs.lip[no]);
   });
 
-  $(".prev").on("click",function(){
-      if(no+1>0){
-          no--;
-          $(".color-chart-list").animate({"left":"+=40px"},200);
-      }
-  });
-
-  for(let i=0; i<itemList.best_img.length; i++) {
-      no=$(this).index();
-      $(".imgBox > img:eq("+i+")").attr("src", "../imgs"+itemList.best_img[no]);
-  };
-
-  $(".color-chart-list li").on("click", function(){
-    // 색상을 클릭하면 해당 색상의 이름으로 변경
-      no=$(this).index();
-      $(".ColorName").html(itemList.lip_text[no]);
-      // $(".ColorName").css("color", itemList.lip_pallet[i]);
+  // hover하면 리스트 커지게 
+  $('.best-items').hover(function(){
+    $(this).stop().addClass('onhover');
+  }, function(){
+    $(this).stop().removeClass('onhover');
   });
 
 
+  
+  // 스킨케어 main-menu hover == sub-menu down
+  $('.sub-parent2').hover(function(){
+    $('.skin-sub-wrap').stop().slideDown(600);
+  }, function(){
+    $('.skin-sub-wrap').stop().slideUp(300);
+  });
 
+  $('.skin-sub-wrap').hover(function(){
+    $('.skin-sub-wrap').stop().show();
+  }, function(){
+    $('.skin-sub-wrap').stop().slideUp(300);
+  });
+  
+  // 메이크업 main-menu hover == sub-menu down
+  $('.sub-parent1').hover(function(){
+    $('.makeup-sub-wrap').stop().slideDown(600);
+  }, function(){
+    $('.makeup-sub-wrap').stop().slideUp(300);
+  });
+
+  $('.makeup-sub-wrap').hover(function(){
+    $('.makeup-sub-wrap').stop().show();
+  }, function(){
+    $('.makeup-sub-wrap').stop().slideUp(300);
+  });
+
+  // when login icon hover, show login pop up
+  $('.login-btn').hover(function(){
+    $('.login-hover').stop().fadeIn(400);
+  }, function(){
+    $('.login-hover').stop().fadeOut(250);
+  });
+
+  $('.cart-btn').hover(function(){
+    $('.cart-hover').stop().fadeIn(400);
+  }, function(){
+    $('.cart-hover').stop().fadeOut(250);
+  });
 }); //jQuery end
+
+
+window.onload = function() {
+  const navBtn = document.querySelector('.navigator');
+  navBtn.addEventListener('click', function(e){
+    const target = e.target
+    const link = target.dataset.link;
+    //data-link="값" 선언, 찾기
+    if (link ===null) {
+      return;
+      //다른 곳을 클릭해서 링크가 비어있다면 아무것도 하지 않음.
+    }
+    // console.log(e.target.dataset.link);
+    const scrollTo = document.querySelector(link);
+    //data-link값을 받아와서 보여지도록 함
+    scrollTo.scrollIntoView({behavior:'smooth'});
+  });
+
+  // show "arrow-up" button when scrolling down
+  const homeHeight = window.innerHeight;
+  const arrowUp = document.querySelector('.arrow-up');
+  document.addEventListener('scroll', function(){
+    if(window.scrollY > homeHeight / 2) {
+      arrowUp.classList.add('visible');
+    } else {
+      arrowUp.classList.remove('visible');
+    }
+  });
+
+  arrowUp.addEventListener('click', function(){
+    window.scrollTo({
+      top:0,
+      behavior:'smooth'
+    });
+  });
+
+}

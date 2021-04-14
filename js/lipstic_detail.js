@@ -1,3 +1,4 @@
+'use strict'
 const color_chart = {
   "lip_text" : ["드라마라마", "블룸박스","무디블룸"],
   "lip_color" : ["#F41D49", "#F64A47","#B11F22"],
@@ -8,6 +9,7 @@ const color_chart = {
 }
 
 $(function(){
+
   // 옵션 선택
   $(".default_option").click(function(){
     $(this).parent().toggleClass("active");
@@ -51,8 +53,8 @@ $(function(){
 
   //컬러 박스를 클릭하면 텍스트와 해당 색상으로 변경
   $('.color__pallet > div').on('click', function(){
-    no=$(this).index();
-    $(".option-name").html(color_chart.lip_text[no]).css("color",color_chart.lip_color[no] );
+    let no=$(this).index();
+    $(".option-name").html(color_chart.lip_text[no]).css("color",color_chart.lip_color[no]);
   });
 
   $('.add-cart-btn').on('click', function(){
