@@ -364,7 +364,6 @@ font-size: var(--font-extrasmall);
   display: none;
 }
 
-
 #sub__menu {
   width: 1200px;
   height: 85%;
@@ -372,7 +371,6 @@ font-size: var(--font-extrasmall);
   padding: 10px 30px 0px 30px;
   display: flex;
   justify-content: space-between;
-  outline: 1px solid beige;
 }
 
 #sub__menu > div:nth-child(n+2) {
@@ -456,11 +454,12 @@ font-size: var(--font-extrasmall);
 
 /* ----------------------------------- body */
 .swiper-container {
-  width: 80%;
+  width: 1440px;
+  min-width: 1200px;
+  max-height: 650px;
   overflow: hidden;
   margin: 0 auto;
 }
-
 .swiper-slide > a > img {
   width: 100%;
 }
@@ -519,6 +518,8 @@ font-size: var(--font-extrasmall);
   width: 100%;
 }
 .collection-desc {
+  position: relative;
+  /* click me를 위한 포지션 */
   height: 80px;
   text-align: center;
   font-size: var(--font-small);
@@ -529,6 +530,7 @@ font-size: var(--font-extrasmall);
   font-weight: var(--weight-bold);
   margin: 5px auto;
 }
+
 .collection-desc > p {
   width: 100%;
   height: 50px;
@@ -536,8 +538,8 @@ font-size: var(--font-extrasmall);
 }
 
 .collection-desc > a {
-  font-size: var(--font-micro);
-  color: var(--color-dark-white);
+  font-size: var(--font-extrasmall);
+  color: var(--color-light-black);
   text-decoration: underline;
 }
 
@@ -546,10 +548,10 @@ font-size: var(--font-extrasmall);
   display: flex;
   justify-content: space-between;
   position: absolute;
-  z-index: 6;
   top: 50%;
-  left: 5%;
+  left: 6%;
   transform: translateY(-50%);
+  background: none;
 }
 
 .main-new-collction-btn > button > i {
@@ -855,13 +857,21 @@ button.slick-arrow {
   margin-bottom: 8px;
   background: url("../imgs/insta-mac-lover.jpg") center/cover no-repeat;
 }
-.insga_thumb{object-fit: contain;}
+div.insga_thumb{
+  object-fit: contain;
+  transition: all 1000ms;
+}
+.insga_thumb:hover {
+  background-position-x: -10px;
+  cursor: pointer;
+}
 
 .insga_thumb1 {
   grid-column: 5/6;
   grid-row: 2/3;
   background: url("../imgs/insta1.png") center/cover no-repeat;
 }
+
 .insga_thumb2 {
   grid-column: 3/4;
   grid-row: 1/2;

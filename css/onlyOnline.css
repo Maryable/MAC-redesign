@@ -6,24 +6,37 @@
 }
 
 .main__title p {
-  font-size: var(--font-small);
-  font-weight: var(--weight-bold);
+  font-size: var(--font-extrasmall);
+  font-weight: var(--weight-regular);
+  color: var(--color-light-black);
 }
 
-.sub__title{ margin:50px 0; text-align: center;}
+.sub__title{ 
+  width: 100%;
+  margin:50px 0; 
+  text-align: center;
+}
+
 .sub__title > h6{
+  width: 100%;
   font-size: var(--font-large);
   font-weight: var(--weight-heavy);
+  text-align: center;
 }
 .sub__title > span {
+  display: block;
+  width: 100%;
   font-size: var(--font-regular);
   font-weight: var(--weight-thin);
+  text-align: center;
 }
+
 .benefit__container {
   width: 1200px;
   height: auto;
   margin: 0 auto;
 }
+
 .benefit-wrap1 {
   margin: 100px auto;
   text-align: center;
@@ -34,8 +47,6 @@
   justify-content: space-between;
 }
 
-
-
 .promo-detail {
   font-size: var(--font-extrasmall);
   font-weight: var(--weight-thin);
@@ -43,22 +54,21 @@
 }
 
 /* -----------------카카오 프랜즈  */
-.benefit2 li:nth-child(1) div {
-  width: 100%;
-  height: 380px;
-  background: url("../imgs/onlyMAC3.jpg")center/cover no-repeat;
-}
-
-.benefit2 li:nth-child(2) div {
+.benefit2 li{
   display: flex;
-  flex-direction: column;
   align-items: center;
   text-align: center;
   justify-content: center;
+}
+.benefit2 li div {
+  width: 500px;
   height: 380px;
 }
-
-.benefit2 p {
+.benefit2 li div img {
+  width: 100%;
+}
+.benefit2 p.promo-intro {
+  margin-top: 140px;
   margin-bottom: 12px;
 }
 
@@ -75,14 +85,16 @@
 .benefit3__title {
   font-weight: var(--weight-extrabold);
   font-size: var(--font-regular);
-  margin-bottom: 10px;
 }
 .benefit3 div {
   height: 400px;
+  width: 500px;
 }
+
 .benefit3 p, .benefit3 span {
   text-align: center;
 }
+
 .benefit3 li:nth-child(1) {
   float: left;
   text-align: center;
@@ -121,7 +133,6 @@
 }
 
 /* ------------------- review banner area */
-
 .review_banner {
   margin: 100px auto;
 }
@@ -200,7 +211,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  height: 600px;
+  height: 460px;
   background: url("../imgs/ARTISTRY_AMBIENT_CROP.jpg") bottom/cover no-repeat fixed;
 }
 

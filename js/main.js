@@ -100,6 +100,19 @@ $(function(){
   $('.slick-arrow').hide();
 
 
+  // click me 버튼 hover event for GNB
+  $('.nav__menu > li').hover(function(){
+    $(this).children('.clickme').fadeIn(200);
+  }, function(){
+    $(this).children('.clickme').fadeOut(200);
+  });
+  // click me 매트 립스틱 hover event 
+  $('.mattLip').hover(function(){
+    $('.clickme1').fadeIn(200);
+  }, function(){
+    $('.clickme1').fadeOut(200);
+  });
+
 }); //jQuery end
 
 
@@ -121,6 +134,8 @@ window.onload = function(){
       behavior:'smooth'
     });
   });
+
+
 
 }
 

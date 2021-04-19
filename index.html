@@ -8,7 +8,7 @@
   <meta name="author" content="Goeun Lee">
   <meta name="description" content="Static web page design and publishing project">
   <!-- description -->
-  <meta property="og:image" content="./imgs/everyday_offer6.jpg">
+  <meta property="og:image" content="./imgs/og_tag_img">
   <meta property="og:title" content="MAC Cosmetics Korea">
   <meta property="og:description" content="맥 코리아 홈페이지에 오신 것을 환영합니다.">
   <!-- og tag -->
@@ -19,13 +19,13 @@
   <link rel="stylesheet" href="./css/default.css">
   <link rel="stylesheet" href="./css/fontface.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" href="./css/index.css">
   <link rel="shortcut icon" type="images/png" href="./imgs/favicon.ico">
   <!-- styles  -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script defer src="./js/main.js" ></script>
 </head>
 <body>
@@ -46,7 +46,9 @@
                 </div>
               </li>
               <li><a href="#"><img src="./imgs/h_spot_icon.svg" alt="find a store icon"></a></li>
-              <li class="cart-btn"><a href="#"><img src="./imgs/h_cart_icon.svg" alt="my cart icon"></a>
+              <li class="cart-btn">
+                <a href="./cart.html">
+                  <img src="./imgs/h_cart_icon.svg" alt="my cart icon"></a>
                 <!-- cart icon hover POP UP -->
                 <div class="cart-hover">
                   <p> 장바구니 <span>3 상품</span> </p>
@@ -89,7 +91,8 @@
                   </div>
                 </div> <!-- cart-hover end -->
               </li> <!-- cart icon end -->
-              <li class="login-btn"><a href="#"><img src="./imgs/h_login_icon.svg" alt="login & mypage icon"></a>
+              <li class="login-btn">
+                <a href="#"><img src="./imgs/h_login_icon.svg" alt="login & mypage icon"></a>
                 <div class="login-hover">
                   <p>로그인 <a href="#">회원가입</a></p>
                   <form action="#">
@@ -114,13 +117,17 @@
     <nav id="navbar">
       <div class="center__1200 nav__wrap">
         <ul class="nav__menu">
-          <li><a href="./new-collction.html"><span>신제품 컬렉션</span></a></li>
-          <li><a href="./best-seller.html">베스트셀러</a></li>
+          <li><span class="clickme">Click</span>
+            <a href="./new-collction.html"><span>신제품 컬렉션</span></a></li>
+          <li><span class="clickme">Click</span>
+            <a href="./best-seller.html">베스트셀러</a></li>
           <li class="sub-parent1"><a href="#">메이크업</a></li> 
           <li class="sub-parent2"><a href="#">스킨케어</a></li>
           <li><a href="#">컨설팅</a></li> 
           <li><a href="#">맥스토리</a></li>
-          <li><a href="./onlyOnline.html"><span>공식몰 단독</span></a></li>
+          <li>
+            <span class="clickme">Click</span>
+            <a href="./onlyOnline.html"><span>공식몰 단독</span></a></li>
         </ul>
       </div> <!--gnb navbar  end-->
   
@@ -295,11 +302,13 @@
       <aside class="new-slide-container center__1200">
         <h6>만개한 벚꽃이 흐드러지는 <span>블랙체리컬렉션</span></h6>
         <ul class="new-collection-imgs">
-          <li> <!-- item1 -->
-            <a href="./lipstic_detail.html"><img src="imgs/main-collection01.png" alt="black cherry collection lipstic"></a>
+          <li class="mattLip"> <!-- item1 -->
+            <a href="./lipstic_detail.html">
+              <img src="imgs/main-collection01.png" alt="black cherry collection lipstic"></a>
             <div class="collection-desc">
               <p>입술에 가볍게 밀착되는 <br /> 세 가지 소프트 컬러</p>
               <h4>매트 립스틱</h4>
+              <span class="clickme1">Click</span>
               <a href="./lipstic_detail.html">구매하기</a>
             </div>
           </li><!-- item1 -->
@@ -566,6 +575,7 @@
         호스팅서비스 사업자: ㈜엘지유플러스</P>
     </div>
   </footer>
+
   <!-- arrow up button -->
   <button class="arrow-up">
     <i class="xi-arrow-up"></i>

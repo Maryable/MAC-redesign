@@ -32,7 +32,7 @@ p, h3, h2,h5 {
     margin: 80px auto 120px auto;
 }
 
-section {margin: 180px auto;}
+section {margin: 180px auto 140PX auto;}
 
 .section-title {
     width: 100%;
@@ -71,7 +71,6 @@ section {margin: 180px auto;}
 .best-items span {
     font-size: var(--font-extrasmall);
 }
-
 
 .imgBox {
     width: 100%;
@@ -164,7 +163,7 @@ section {margin: 180px auto;}
 
 /* ------------best-seller banner section */
 .best__seller__banner {
-    width: 100%; height: 413px;
+    width: 100%; height: 400px;
     background: url("../imgs/bestseller/bestBanner.jpg") center/cover no-repeat;
     display: flex;
     align-items: center;
