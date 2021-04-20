@@ -33,3 +33,5 @@ I have placed the virtual try on button under the thumbnail
 so that you can see the lipstick color in advance using the device you have. 
 If you click the lipstick color, you can see the product, and the lipstick name is changed to that color.
 Underneath the product, I made a section where you could watch videos advertising the product, and I put the details of the product on the bottom of the page.
+
+Copyright 2021 Goeun Lee / Maryable
