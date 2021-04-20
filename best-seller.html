@@ -21,7 +21,7 @@
 <body>
     <!-- 서버에서 확인 가능, php언어, 헤더부분만 따로 떼어내서 포함시킴 -->
     <!-- <? include "header.html"; ?> -->
-  <div id="header-wrap" class="header-wrap">
+    <div id="header-wrap" class="header-wrap">
       <header>
         <!-- header for webpage -->
         <div class="header-container">
@@ -38,7 +38,9 @@
                   </div>
                 </li>
                 <li><a href="#"><img src="./imgs/h_spot_icon.svg" alt="find a store icon"></a></li>
-                <li class="cart-btn"><a href="#"><img src="./imgs/h_cart_icon.svg" alt="my cart icon"></a>
+                <li class="cart-btn">
+                  <a href="./cart.html">
+                    <img src="./imgs/h_cart_icon.svg" alt="my cart icon"></a>
                   <!-- cart icon hover POP UP -->
                   <div class="cart-hover">
                     <p> 장바구니 <span>3 상품</span> </p>
@@ -81,7 +83,8 @@
                     </div>
                   </div> <!-- cart-hover end -->
                 </li> <!-- cart icon end -->
-                <li class="login-btn"><a href="#"><img src="./imgs/h_login_icon.svg" alt="login & mypage icon"></a>
+                <li class="login-btn">
+                  <a href="#"><img src="./imgs/h_login_icon.svg" alt="login & mypage icon"></a>
                   <div class="login-hover">
                     <p>로그인 <a href="#">회원가입</a></p>
                     <form action="#">
@@ -106,18 +109,22 @@
       <nav id="navbar">
         <div class="center__1200 nav__wrap">
           <ul class="nav__menu">
-            <li><a href="./new-collction.html"><span>신제품 컬렉션</span></a></li>
-            <li><a href="./best-seller.html">베스트셀러</a></li>
+            <li><span class="clickme">Click</span>
+              <a href="./new-collction.html"><span>신제품 컬렉션</span></a></li>
+            <li><span class="clickme">Click</span>
+              <a href="./best-seller.html">베스트셀러</a></li>
             <li class="sub-parent1"><a href="#">메이크업</a></li> 
             <li class="sub-parent2"><a href="#">스킨케어</a></li>
             <li><a href="#">컨설팅</a></li> 
             <li><a href="#">맥스토리</a></li>
-            <li><a href="./onlyOnline.html"><span>공식몰 단독</span></a></li>
+            <li>
+              <span class="clickme">Click</span>
+              <a href="./onlyOnline.html"><span>공식몰 단독</span></a></li>
           </ul>
         </div> <!--gnb navbar  end-->
     
         <div class="skin-sub-wrap sub-wrap">
-          <div id="sub__menu">
+          <div class="sub__menu">
             <!--sub01 Mac Try On  -->
             <div class="sub__ad__wrap">
               <a href="#">
@@ -182,9 +189,8 @@
           </div> <!-- skin care submenu -->
         </div>
         <div class="makeup-sub-wrap sub-wrap">
-          <div id="sub__menu">
+          <div class="sub__menu">
             <!--sub01 Mac Try On  -->
-            
               <div class="sub__ad__wrap">
                 <a href="#">
                 <div class="ad__img ad__tryon"><img src="./imgs/sub_try_on.jpg" alt="mac try on image"></div>
@@ -749,61 +755,61 @@
 
   <!-- footer  -->
   <footer id="footer">
-      <div class="event-banner-wrap">
-        <div class="event__banner center__1200">
-          <p><a href="#">첫 구매 15% 할인 및 전 구매 무료 배송 / 배송 지연 안내</a></p>
-          <ul class="sns">
-            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-            <li><a href="#"><i class="xi-instagram"></i></a></li>
-            <li><a href="#"><i class="xi-facebook"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-          </ul>
-        </div>
+    <div class="event-banner-wrap">
+      <div class="event__banner center__1200">
+        <h6><a href="#">첫 구매 15% 할인 및 전 구매 무료 배송 / 배송 지연 안내</a></h6>
+        <ul class="sns">
+          <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+          <li><a href="#"><i class="xi-instagram"></i></a></li>
+          <li><a href="#"><i class="xi-facebook"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        </ul>
       </div>
-  
-      <div class="cs__service">
-        <div class="tel">
-          <p>CONTACT US</p>
-          <address>
-            <a href="tel:+820269713291">02-6971-3291</a> <br>
-            <a href="USER_SUPPORT@KR.MACCOSMETICS.COM">이메일 문의</a>
-          </address>
-        </div> <!-- tel -->
-        <div class="cs__menu">
-          <ul>ABOUT US
-            <li><a href="#">OUR STORY</a></li>
-            <li><a href="#">맥 에이즈 편드</a></li>
-            <li><a href="#">맥 프로 멤버십</a></li>
-            <li><a href="#">백 투 맥</a></li>
-            <li><a href="#">채용정보</a></li>
-            <li><a href="#">ANIMAL TESTING</a></li>
-          </ul>
-          <ul>M.A.C STORE
-            <li><a href="#">매장안내</a></li>
-            <li><a href="#">메이크업 컨설팅 예약</a></li>
-          </ul>
-          <ul>내 정보 및 주문관리
-            <li><a href="#">나의 맥 러버</a></li>
-            <li><a href="#">내 정보 및 수정</a></li>
-            <li><a href="#">주문 배송 조회</a></li>
-            <li><a href="#">위시리스트</a></li>
-          </ul>
-          <ul>FAQS
-            <li><a href="#">배송정보</a></li>
-            <li><a href="#">반품 및 교환</a></li>
-            <li><a href="#">다른 지역 보기</a></li>
-            <li><a href="#">지역 변경</a></li>
-          </ul>
-        </div> <!-- cs__menu -->
-      </div> <!-- cs__service -->
-      <div class="about__company">
-        <P class="center__1200"><a href="#">로그인</a> | <a href="#">회원가입</a> | 
-          <a href="#">이용약관</a> | <span>개인정보처리방침</span> | 
-          <span>이메일 무단 수집 거부 </span>|  전자공고 | 사이트맵 | 
-          이엘씨에이한국(유) 대표 | 서울시 강남구 강남대로 382 (역삼동) 메리츠타워, 06232 사업자등록번호: 211-81-71889
-          © MAKE-UP ART COSMETICS. ALL WORLDWIDE RIGHTS RESERVED. 통신판매업신고번호: 강남-15737호 | 사업자정보조회 |
-          호스팅서비스 사업자: ㈜엘지유플러스</P>
-      </div>
+    </div>
+
+    <div class="cs__service">
+      <div class="tel">
+        <p>CONTACT US</p>
+        <address>
+          <a href="tel:+820269713291">02-6971-3291</a> <br>
+          <a href="USER_SUPPORT@KR.MACCOSMETICS.COM">이메일 문의</a>
+        </address>
+      </div> <!-- tel -->
+      <div class="cs__menu">
+        <ul><a href="#">ABOUT US</a>
+          <li><a href="#">OUR STORY</a></li>
+          <li><a href="#">맥 에이즈 편드</a></li>
+          <li><a href="#">맥 프로 멤버십</a></li>
+          <li><a href="#">백 투 맥</a></li>
+          <li><a href="#">채용정보</a></li>
+          <li><a href="#">ANIMAL TESTING</a></li>
+        </ul>
+        <ul><a href="#">M.A.C STORE</a>
+          <li><a href="#">매장안내</a></li>
+          <li><a href="#">메이크업 컨설팅 예약</a></li>
+        </ul>
+        <ul><a href="#">내 정보 및 주문관리</a>
+          <li><a href="#">나의 맥 러버</a></li>
+          <li><a href="#">내 정보 및 수정</a></li>
+          <li><a href="#">주문 배송 조회</a></li>
+          <li><a href="#">위시리스트</a></li>
+        </ul>
+        <ul><a href="#">FAQS</a>
+          <li><a href="#">배송정보</a></li>
+          <li><a href="#">반품 및 교환</a></li>
+          <li><a href="#">다른 지역 보기</a></li>
+          <li><a href="#">지역 변경</a></li>
+        </ul>
+      </div> <!-- cs__menu -->
+    </div> <!-- cs__service -->
+    <div class="about__company">
+      <P class="center__1200"><a href="#">로그인</a> | <a href="#">회원가입</a> | 
+        <a href="#">이용약관</a> | <span>개인정보처리방침</span> | 
+        <span>이메일 무단 수집 거부 </span>|  전자공고 | 사이트맵 | 
+        이엘씨에이한국(유) 대표 | 서울시 강남구 강남대로 382 (역삼동) 메리츠타워, 06232 사업자등록번호: 211-81-71889
+        © MAKE-UP ART COSMETICS. ALL WORLDWIDE RIGHTS RESERVED. 통신판매업신고번호: 강남-15737호 | 사업자정보조회 |
+        호스팅서비스 사업자: ㈜엘지유플러스</P>
+    </div>
   </footer>
   
   <!-- arrow up button -->

@@ -23,9 +23,9 @@
   <link rel="stylesheet" href="./css/index.css">
   <link rel="shortcut icon" type="images/png" href="./imgs/favicon.ico">
   <!-- styles  -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+  <script defer src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script defer src="./js/main.js" ></script>
 </head>
 <body>
@@ -132,7 +132,7 @@
       </div> <!--gnb navbar  end-->
   
       <div class="skin-sub-wrap sub-wrap">
-        <div id="sub__menu">
+        <div class="sub__menu">
           <!--sub01 Mac Try On  -->
           <div class="sub__ad__wrap">
             <a href="#">
@@ -197,9 +197,8 @@
         </div> <!-- skin care submenu -->
       </div>
       <div class="makeup-sub-wrap sub-wrap">
-        <div id="sub__menu">
+        <div class="sub__menu">
           <!--sub01 Mac Try On  -->
-          
             <div class="sub__ad__wrap">
               <a href="#">
               <div class="ad__img ad__tryon"><img src="./imgs/sub_try_on.jpg" alt="mac try on image"></div>
@@ -295,6 +294,7 @@
     </article> <!-- main slide container end -->
 
     <article class="main-new-collection center__1440 margin150">
+      <h3 class="ir_so">맥이 2021년 새로 출시 한 컬랙션을 만나보세요.</h3>
       <div class="main-new-collction-btn center__1200">
         <button id="new-left"><i class="xi-angle-left-thin"></i></button>
         <button id="new-right"><i class="xi-angle-right-thin"></i></button>
@@ -357,6 +357,7 @@
     </article> <!-- main-new-collection 1440 end -->
 
     <article class="tab-menu-container center__1440 margin150">
+      <h3 class="ir_so">꾸준히 사랑받고 있는 맥의 베스트 셀러들을 만나보세요.</h3>
       <aside class="tab-menu-wrap center__1200">
         <div class="best-tab-btn">
           <button class="Eng-title best-seller-btn">BEST SELLER</button>
@@ -449,7 +450,7 @@
             </div>
           </div>
           <p>첫 구매 15% OFF</p>
-          <span>첫 구매 고객 15% 부터 할인 <br /> 전 구매 무료 배송 혜택까지! </span>
+          <span style="font-size: 14px;">첫 구매 고객 15% 부터 할인 <br /> 전 구매 무료 배송 혜택까지! </span>
         </a></li>
         <li class="promo-banner"><a href="#">
           <div class="promo__imgbox">
@@ -521,7 +522,7 @@
   <footer id="footer">
     <div class="event-banner-wrap">
       <div class="event__banner center__1200">
-        <p><a href="#">첫 구매 15% 할인 및 전 구매 무료 배송 / 배송 지연 안내</a></p>
+        <h6><a href="#">첫 구매 15% 할인 및 전 구매 무료 배송 / 배송 지연 안내</a></h6>
         <ul class="sns">
           <li><a href="#"><i class="fab fa-youtube"></i></a></li>
           <li><a href="#"><i class="xi-instagram"></i></a></li>
@@ -540,7 +541,7 @@
         </address>
       </div> <!-- tel -->
       <div class="cs__menu">
-        <ul>ABOUT US
+        <ul><a href="#">ABOUT US</a>
           <li><a href="#">OUR STORY</a></li>
           <li><a href="#">맥 에이즈 편드</a></li>
           <li><a href="#">맥 프로 멤버십</a></li>
@@ -548,17 +549,17 @@
           <li><a href="#">채용정보</a></li>
           <li><a href="#">ANIMAL TESTING</a></li>
         </ul>
-        <ul>M.A.C STORE
+        <ul><a href="#">M.A.C STORE</a>
           <li><a href="#">매장안내</a></li>
           <li><a href="#">메이크업 컨설팅 예약</a></li>
         </ul>
-        <ul>내 정보 및 주문관리
+        <ul><a href="#">내 정보 및 주문관리</a>
           <li><a href="#">나의 맥 러버</a></li>
           <li><a href="#">내 정보 및 수정</a></li>
           <li><a href="#">주문 배송 조회</a></li>
           <li><a href="#">위시리스트</a></li>
         </ul>
-        <ul>FAQS
+        <ul><a href="#">FAQS</a>
           <li><a href="#">배송정보</a></li>
           <li><a href="#">반품 및 교환</a></li>
           <li><a href="#">다른 지역 보기</a></li>
