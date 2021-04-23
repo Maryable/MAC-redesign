@@ -29,6 +29,16 @@
   <script defer src="./js/main.js" ></script>
 </head>
 <body>
+<!-- 접근성을 위한 스킵메뉴 -->
+<div id="skip">
+  <a rel="bookmark" href="#newCollection">신상품 컬렉션 보기</a>
+  <a rel="bookmark" href="#bestseller">베스트셀러 모아보기</a>
+  <a rel="bookmark" href="#collections">최근 컬렉션 보기</a>
+  <a rel="bookmark" href="#service">맥 공식몰 서비스 보기</a>
+  <a rel="bookmark" href="#event">맥 공식몰 이벤트 보기</a>
+</div>
+<!-- 스킵메뉴 -->
+
   <div id="header-wrap" class="header-wrap">
     <header>
       <!-- header for webpage -->
@@ -293,7 +303,7 @@
     </div>
     </article> <!-- main slide container end -->
 
-    <article class="main-new-collection center__1440 margin150">
+    <article id="newCollection" class="main-new-collection center__1440 margin150">
       <h3 class="ir_so">맥이 2021년 새로 출시 한 컬랙션을 만나보세요.</h3>
       <div class="main-new-collction-btn center__1200">
         <button id="new-left"><i class="xi-angle-left-thin"></i></button>
@@ -356,7 +366,7 @@
       </aside> <!-- slide container -->
     </article> <!-- main-new-collection 1440 end -->
 
-    <article class="tab-menu-container center__1440 margin150">
+    <article id="bestseller" class="tab-menu-container center__1440 margin150">
       <h3 class="ir_so">꾸준히 사랑받고 있는 맥의 베스트 셀러들을 만나보세요.</h3>
       <aside class="tab-menu-wrap center__1200">
         <div class="best-tab-btn">
@@ -422,7 +432,7 @@
       </aside>
     </article> <!-- tab menu 1440 end -->
 
-    <article class="new-collection-full-slide margin150">
+    <article id="collections" class="new-collection-full-slide margin150">
       <h6 class="Eng-title">NEW COLLECTION</h6>
       <div class="full-size-wrap">
         <div class="slide-dim-wrap">
@@ -440,7 +450,7 @@
       </div>
     </article> <!-- new-collection-full-slide -->
 
-    <article class="margin150 promotion" >
+    <article id="service" class="margin150 promotion" >
       <ul class="promo-banner-wrap center__1440">
         <li class="promo-banner"><a href="#">
           <div class="promo__imgbox">
@@ -493,7 +503,7 @@
         <h6>#MACCOSMETICS Brag your skills</h6>
         <p>사진에 #MACCOSMETICS를 태그하여 당신의 멋진 메이크업 스킬을 보여주세요. 맥 공식몰에 소개 될 수 있습니다! </p>
         </div>
-      <div class="insta-pics-wrap center__1200">
+      <div id="event" class="insta-pics-wrap center__1200">
         <div class="instagram-form">
           <a href="#">
             <div class="insta__avatar">
