@@ -83,7 +83,6 @@ h6 {
 
 a {
   text-decoration: none;
-  outline: none;
   color: #454545;
 }
 
@@ -91,7 +90,6 @@ button, input {
   background-color: transparent;
   cursor: pointer;
   border: none;
-  outline: none;
   border-radius: 3px;
 }
 
