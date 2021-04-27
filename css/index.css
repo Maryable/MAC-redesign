@@ -1,1103 +1,366 @@
-#skip {font-size:0; line-height:0; overflow:hidden}
-#skip a {
-  display:block;
-  width:100%;
-  padding:10px 0;
-  color:#fff;
-  position:absolute; left:0; top:-100px; 
-  text-align:center; z-index:200; 
-  background:#413022; border: none;
-}
-
-#skip a:focus,
-#skip a:hover,
-#skip a:active {
-  top:0; font-weight:bold;
-  font-size:16px;
-  line-height:1.5; 
-  border-bottom:1px solid #fff;
-}
-
-.header-wrap {
-  width: 100%;
-}
-
-header {
-  width: 100%;
-  height: 80px;
-  background: var(--color-black);
-}
-
-.header-container {
-  width: 1200px;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.announce {
-  display: flex;
-  align-items: center;
-  line-height: 24px;
-  height: 24px;
-}
-
-.announce > p {
-  margin-top: -6px;
-  margin-left: 12px;
-}
-
-.announce > p > a {
-  font-size: 13px;
-  color: var(--color-dark-white);
-  line-height: 24px;
-}
-
-h1 {
-  margin-left: -100px;
-}
-
-.header__icons {
-  display: flex;
-  justify-content: space-between;
-  width: 170px;
-  position: relative;
-}
-
-.header__icons>li {
-  width: 30px;
-  height: 30px;
-}
-
-.header__icons>li>a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.header__icons>li>a>img {
-  vertical-align: middle;
-  margin: 0 5px;
-}
-
-/* ----------------------search icon animation */
-.search__box {
-  position: absolute;
-  top: -5px;
-  right: 140px;
-  height: 34px;
-  border-radius: 25px;
-  padding: 2px 5px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.search__txt {
-  border: none;
-  background: none;
-  outline: none;
-  padding: 0;
-  font-size: 16px;
-  color: #fff;
-  transition: 0.4s;
-  width: 0;
-  line-height: 20px;
-  width: 0px;
-}
-
-.search__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--color-white);
-  float: right;
-  font-size: 25px;
-  border-radius: 50%;
-}
-
-input[type="search"]::placeholder {
-  font-size: 16px;
-  color: var(--color-dark-white);
-}
-
-.search__box:hover {
-  background: var(--color-dark-black);
-  border: 1px solid var(--color-dark-white);
-}
-
-.search__box:hover .search__txt {
-  width: 200px;
-  border-radius: 25px;
-  padding: 2px 8px;
-  background: var(--color-dark-black);
-}
-
-.search__box:hover > .search__btn {
-  transition: all var(--animation-duration);
-}
-
-/* ------------------------------login hover pop up  */
-.login-hover, .cart-hover{
-  position: absolute;
-  z-index: 30;
-  top: 35px;
-  background:var(--color-white);
-  width: 300px;
-  height: auto;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  display: none;
-}
-
-.login-hover {
-  right:0px;
-}
-
-.cart-hover {
-  right:45px;
-}
-
-.login-hover::before, .cart-hover::before {
-	position: absolute;
-	content: '';
-	width:0;
-	height: 0;
-	border: 8px solid transparent;
-	border-bottom-color:var(--color-white);
-	right: 8px;
-	top:-16px;
-}
-
-.login-hover > p, 
-.cart-hover > p  {
-  width: 100%;
-  height: 30px;
-  margin-bottom: 20px;
-  font-weight: var(--weight-bold);
-  border-bottom: 1px solid var(--color-light-white);
-}
-.login-hover > p > a {
-  float: right;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-light);
-  color: var(--color-light-black);
-  text-decoration: underline;
-}
-
-input[type="email"], input[type="password"], #login-btn {
-  width: 260px;
-  height: 35px;
-  padding: 6px;
-  border: 1px solid var(--color-dark-white);
-  margin: 8px 0;
-}
-
-#login-btn {
-  background-color: var(--color-dark-black);
-  color: var(--color-white);
-  padding-bottom: 14px;
-}
-
-input[type="email"]::placeholder, input[type="password"]::placeholder{
-  color: var(--color-dark-white);
-  font-size: var(--font-micro);
-}
-input[type=checkbox] {
-  width: 16px;
-  height: 16px;
-  margin-top: 4px;
-  margin-right: 8px;
-}
-
-.check-id {
-  display: flex;
-  align-items: center;
-}
-
-.rememberId > span {
-  font-size: var(--font-micro);
-  color: var(--color-dark-white);
-}
-/* -------------------------------------cart hover pop up  */
-.cart-hover {
-  width: 400px;
-  height: 700px;
-}
-
-.cart-hover > p > span {
-  font-size: var(--font-micro);
-  color: var(--color-light-black);
-  font-weight: var(--weight-light);
-  margin-left: 10px;
-}
-
-.cart-item {
-  width: 100%;
-  height: 130px;
-  border-bottom: 1px solid var(--color-light-white);
-}
-
-.cart-item > img { width: 85px; float: left;}
-
-.item-desc {
-  width: 76%;
-  float: right;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 12px;
-}
-
-.item-desc > p {
-  /* product name in cart */
-  width: 76%;
-  font-size: var(--font-extrasmall);
-  margin-bottom: 8px;
-}
-
-.cart-item > .item-price {
-/* product price */
-width: 76%;
-margin-top: 35px;
-float: right;
-display: flex;
-justify-content: space-between;
-font-size: var(--font-extrasmall);
-}
-
-.cart-item > .item-price > span {
-  font-weight: var(--weight-bold);
-}
-
-.cart-item-color {
-  color: #FE2F15;
-  font-size: 10px;
-  font-weight: var(--weight-thin);
-}
-
-.pop-cart-bottom {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  padding: 0 20px;
-}
-
-.pop-cart-bottom > p {
-  width: 100%;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  font-size: var(--font-regular);
-  font-weight: var(--weight-extrabold);
-}
-
-.pop-cart-bottom > a {
-  display: block;
-  width: 100%;
-  height: 40px;
-  font-size: var(--font-thin);
-  text-align: center;
-  line-height: 40px;
-}
-
-.pop-cart-bottom > a:nth-child(2) {
-  color: var(--color-white);
-  background: var(--color-dark-black);
-}
-
-.pop-cart-ad {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.pop-cart-ad > p {
-  width: 70%;
-  font-size: var(--font-micro);
-  color: var(--color-gray);
-}
-
-/* --------------------------------------navbar */
-#navbar {
-  position: relative;
-  z-index: 29;
-  width: 100%;
-  height: 50px;
-  background: var(--color-black);
-}
-
-.nav__menu {
-  width: 900px;
-  height: 50px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  vertical-align: middle;
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Goeun Lee">
+  <meta name="description" content="ì›¹ í¼ë¸”ë¦¬ì…” ì´ê³ ì€ì˜ í¬íŠ¸í´ë¦¬ì˜¤ìž…ë‹ˆë‹¤.">
+  <meta name="keywords" content="ì›¹í¼ë¸”ë¦¬ì…”, í”„ë¡ íŠ¸ì—”ë“œ, í¬íŠ¸í´ë¦¬ì˜¤, portfolio, web publisher, front-end, responsive web">
+  <title>Goeun Lee Portfolio</title>
   
-}
-
-.nav__menu>li {
-  position: relative;
-}
-
-.nav__menu>li>a {
-  padding: 10px;
-  color: var(--color-white);
-  font-weight: var(--weight-regular);
-  font-size: var(--font-small);
-}
-
-.nav__menu>li>a>span {
-  font-weight: var(--weight-bold);
-}
-
-.nav__menu>li>a::after{
-  content: '';
-  display: block;
-  position: absolute;
-  width: 0%;
-  bottom: -5px;
-  left: 50%;
-  transform: translate(-50%);
-  border-bottom: 1px solid var(--color-white);
-  transition: all var(--animation-duration) ease-out;
-}
-
-.nav__menu>li>a:hover::after {
-  width: 100%;
-}
-
-/* ----------------------------------- submenu */
-.skin-sub-wrap, .makeup-sub-wrap {
-  width: 100%;
-  height: 400px;
-  position: absolute;
-  z-index: 30;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--color-white);
-  box-shadow: 0 0 1.5px rgba(0,0,0,0.3);
-  display: none;
-}
-
-.sub__menu {
-  width: 1200px;
-  height: 85%;
-  margin: 28px 360px;
-  padding: 10px 30px 0px 30px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.sub__menu > div:nth-child(n+2) {
-  -ms-flex: 1;
-  flex: 1;
-  text-align: left;
-}
-
-.sub__menu > div:first-child {
-  flex: 2;
-  -ms-flex: 2;
-  margin-right: 100px;
-}
-.sub__ad__wrap {
-  margin-top: 15px;
-  width: 350px;
-  height: 270px;
-  text-align: center;
-}
-.sub__ad__wrap > a {display: block; width: 100%; height: 100%;}
-
-.sub__ad__wrap > a > .ad__img {
-  width: 100%;
-  height: 190px;
-}
-
-.ad__prep {
-  background: url("../imgs/sub_prep+prime.jpg") center/cover no-repeat;
-}
-
-.ad__tryon {
-  background: url("../imgs/sub_try_on.jpg") center/cover no-repeat;
-}
-
-.sub__ad__wrap > a > h5 {
-  width: 100%;
-  margin: 8px auto;
-  cursor: default;
-}
-
-.sub__ad__wrap > a > h5 > span {
-  font-weight: var(--weight-black);
-  font-size: var(--font-medium);
-  margin-left: 8px;
-}
-
-.sub__list > li {
-  margin: 8px 0;
-}
-
-.sub__list_title {
-  font-size: var(--font-small) ;
-  font-weight: 600;
-  cursor: default;
-  text-align: left;
-}
-
-.sub__list > li:last-child {
-  margin-top: 34px;
-}
-
-.sub__list > li:last-child a {
-  border-bottom: 1px solid var(--color-light-black);
-}
-
-.sub__list > li > a {
-  font-size: var(--font-small);
-  font-weight: var(--weight-light);
-  color: var(--color-light-black);
-  padding: 2px 4px;
-  transition: all var(--animation-duration);
-}
-
-.sub__list > li > a:hover {
-  text-decoration: underline;
-}
-
-.sub__list > li > a:last-child {
-  font-size: var(--font-micro);
-}
-
-/* ----------------------------------- body */
-.swiper-container {
-  width: 1440px;
-  min-width: 1200px;
-  max-height: 650px;
-  overflow: hidden;
-  margin: 0 auto;
-}
-.swiper-slide > a > img {
-  width: 100%;
-}
-
-.slider-btn {
-  color: var(--color-dark-black);
-}
-
-.swiper-pagination-bullet {
-  background-color: var(--color-black);
-}
-
-.swiper-pagination-bullet-active {
-  width: 23px;
-  height: 8px;
-  border-radius: 26px;
-}
-
-/* -------------------------main-new-collciont */
-.main-new-collection, tab-menu-container {
-  position: relative;
-  background-color: #fff;
-  margin: 150px auto;
-}
-
-.new-slide-container {
-  overflow: hidden;
-  width: 1200px;
-  height: 500px;
-}
-.new-slide-container> h6 {
-  font-weight: var(--weight-black);
-}
-
-.new-slide-container> h6 > span {
-  font-weight: var(--weight-regular);
-}
-
-.new-collection-imgs {
-  width: 2300px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-.new-collection-imgs > li {
-  width: 350px;
-  height: 100%;
-}
-
-.new-collection-imgs > li:first-child {
-  margin-left: 1.8%;
-}
-
-.new-collection-imgs > li > a > img {
-  width: 100%;
-}
-.collection-desc {
-  position: relative;
-  /* click meë¥¼ ìœ„í•œ í¬ì§€ì…˜ */
-  height: 80px;
-  text-align: center;
-  font-size: var(--font-small);
-}
-
-.collection-desc > h4 {
-  font-size: var(--font-medium);
-  font-weight: var(--weight-bold);
-  margin: 5px auto;
-}
-
-.collection-desc > p {
-  width: 100%;
-  height: 50px;
-  font-size: var(--font-extrasmall);
-}
-
-.collection-desc > a {
-  font-size: var(--font-extrasmall);
-  color: var(--color-light-black);
-  text-decoration: underline;
-}
-
-.main-new-collction-btn {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  top: 50%;
-  left: 6%;
-  transform: translateY(-50%);
-  background: none;
-}
-
-.main-new-collction-btn > button > i {
-  font-size: 50px;
-  color: var(--color-light-black);
-}
-
-/* ------------------best-seller */
-.best-tab-wrap {
-  position: relative;
-  margin: auto;
-  height: 420px;
-  overflow: hidden;
-}
-
-.best-tab-btn{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.best-tab-btn > button {
-  font-family: 'Raleway';
-  margin:10px;
-  color: var(--color-dark-black);
-}
-
-.tab-menu-list {
-  width: 2200px;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-left: 1.8%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: var(--color-white);
-}
-
-.tab-menu-list > li {
-  width: 350px;
-  height: 100%;
-  text-align: center;
-  background: var(--color-white);
-}
-
-.tab-menu-list > li > a > img {
-  width: 100%;
-}
-
-.tab-menu-btn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  width:100%;
-  z-index: 5;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.tab-menu-btn > button > i {
-  font-size: 50px;
-  color: var(--color-light-black);
-}
-.best-seller-btn {
-  display: flex;
-  flex-basis: 100%;
-  align-items: center;
-}
-
-.best-seller-btn::before,
-.best-seller-btn::after {
-  content: '';
-  display: block;
-  flex-grow: 1;
-  background: rgba(0,0,0,0.2);
-  height: 1px;
-  font-size: 0px;
-  line-height: 0px;
-  margin: 0 10px;
-
-}
-
-.best-seller-desc > p {
-  margin-top: 20px;
-  font-size: var(--font-small);
-  font-weight: var(--font-thin);
-}
-
-.best-seller-desc > h4 {
-  font-size: var(--font-small);
-  font-weight: var(--weight-bold);
-}
-
-.best-seller-desc > h4 >span {
-  font-size: var(--font-regular);
-  font-weight: var(--weight-heavy);
-}
-
-/* ----------------------full screen wide slide */
-.slide-dim-wrap{
-  width: 100%;
-  height: 510px;
-  position: absolute;
-  z-index: 5;
-  display: flex;
-}
-
-.slide-dim-left, .slide-dim-right {
-  width: 600px;
-  background-color: rgba(0,0,0,0.6);
-}
-
-.slide-dim-center {
-  min-width: 1200px;
-}
-
-.slick-dots {
-  display: flex;
-  width: 100%;
-  margin: 20px 0;
-  align-items: center;
-  justify-content: center;
-}
-
-.slick-dots > li > button {
- color: transparent;
-}
-
-.slick-dots >li {
-  width: 10px;
-  height: 10px;
-  background: var(--color-dark-white);
-  margin: 0 8px;
-  border-radius: 50%;
-  color: transparent;
-}
-
-.slick-dots >li.slick-active {
-width: 24px;
-height: 8px;
-border-radius: 26px;
-background-color: var(--color-black);
-}
-
-button.slick-arrow {
-  display: none;
-}
-
-.slide-dim {
-  float: left;
-}
-
-.slide-dim-center {
-  min-width: 1200px;
-  width: 1200px;
-}
-
-.new-full-container::before {
-  content: '';
-  display: block;
-  background: rgba(0,0,0,0.6);
-  position: absolute;
-  left: -830px;
-}
-
-.new-full-container::after {
-  content: '';
-  display: block;
-  background: rgba(0,0,0,0.6);
-  position: absolute;
-  right: -830px;
-}
-
-/* ----------------------promotion banner */
-
-.promo-banner-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.promo-banner {
-  text-align: center;
-  width: 25%;
-}
-
-.promo-banner > a > p {
-  color: var(--color-dark-black);
-  font-size: var(--font-medium);
-  font-weight: var(--weight-extrabold);
-  margin: 10px 0;
-}
-
-.promo-banner > a > span {
-  color: var(--color-gray);
-  font-size: var(--font-extrasmall);
-  font-weight: var(--weight-light);
-  text-align: center;
-}
-.promo__imgbox {
-  position: relative;
-  margin-top: 10px;
-  margin-right: 10px;
-}
-.promo__imgbox:last-child {
-  margin-right: 0;
-}
-
-.imgbox, .imgbox >img {
-  width: 100%;
-  height: 100%;
-}
-
-.promo___description {
-  position: absolute;
-  top: 0;
-  background-color: rgba(0,0,0,0.8);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  margin-right: 20px;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all var(--animation-duration) ease-in;
-}
-
-.promo__imgbox:hover .promo___description {
-  opacity: 1;
-  transform: translateY(0px);
-}
-
-.promo___description > h6 {
-  color: var(--color-light-orange);
-  font-size: var(--font-medium);
-}
-.promo___description > hr {
-  width: 12%;
-  color: var(--color-dark-white);
-  margin-bottom: 10px;
-}
-.promo___description > span {
-  color: var(--color-dark-white);
-  font-size: var(--font-extrasmall);
-  font-weight: var(--weight-thin);
-}
-
-/* ----------------- hash tag event */
-.insta-pics-wrap {
-  width: 100%;
-  height: fit-content;
-  margin-top: 24px;
-  margin-bottom: 180px;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: repeat(5, 1fr);
-}
-
-.hashtag-desc {
-  width: 100%;
-  text-align: center;
-}
-
-.hashtag-desc > span {
-  font-family: 'Raleway';
-  letter-spacing: 0.7em;
-  font-size: var(--font-extrasmall);
-  font-weight: var(--font-thin);
-  color: var(--color-light-black);
-}
-
-.hashtag-desc > h6 {
-  font-family: 'Raleway';
-  font-size: var(--font-title);
-  font-weight: var(--weight-extrabold);
-  margin: 8px auto;
-}
-
-.hashtag-desc > p {
-  font-size: var(--font-small);
-  font-weight: var(--font-thin);
-  color: var(--color-light-black);
-}
-
-.instagram-form {
-  grid-column: 1/2;
-  grid-row: 1/3;
-  width: 350px;
-  font-size: var(--font-extrasmall);
-  font-weight: var(--font-regular);
-  padding: 8px 0;
-  border: 1px solid var(--color-light-white);
-}
-
-.instacont_img {
-  width: 100%;
-  height: 360px;
-  margin-bottom: 8px;
-  background: url("../imgs/insta-mac-lover.jpg") center/cover no-repeat;
-}
-div.insga_thumb{
-  object-fit: contain;
-  transition: all 1000ms;
-}
-.insga_thumb:hover {
-  background-position-x: -10px;
-  cursor: pointer;
-}
-
-.insga_thumb1 {
-  grid-column: 5/6;
-  grid-row: 2/3;
-  background: url("../imgs/insta1.png") center/cover no-repeat;
-}
-
-.insga_thumb2 {
-  grid-column: 3/4;
-  grid-row: 1/2;
-  background: url("../imgs/insta2.png") center/cover no-repeat;
-}
-
-.insga_thumb3 {
-  grid-column: 4/5;
-  grid-row: 1/2;
-  background: url("../imgs/insta3.png") center/cover no-repeat;
-}
-
-.insga_thumb4 {
-  grid-column: 5/6;
-  grid-row: 1/2;
-  background: url("../imgs/insta4.png") center/cover no-repeat;
-}
-
-.insga_thumb5 {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  background: url("../imgs/insta5.png") center/cover no-repeat;
-}
-
-.insga_thumb6 {
-  grid-column: 3/4;
-  grid-row: 2/3;
-  background: url("../imgs/insta6.png") center/cover no-repeat;
-}
-
-.insga_thumb7 {
-  grid-column: 4/5;
-  grid-row: 2/3;
-  background: url("../imgs/insta7.png") center/cover no-repeat;
-}
-
-.insga_thumb8 {
-  grid-column: 2/3;
-  grid-row: 1/2;
-  background: url("../imgs/insta8.png") center/cover no-repeat;
-}
-
-.instagram-form > p:nth-child(1) {
-  margin: 10px 0;
-}
-
-.insta__like {
-  font-weight: var(--font-extrabold);
-  padding: 0 8px;
-}
-.insta__like > i {
-  font-size: var(--font-regular);
-}
-.insta__comment {
-  font-weight: var(--font-extrabold);
-  padding: 0 5px;
-}
-.insta__comment > span {
-  font-weight: var(--weight-extrabold);
-  font-size: var(--font-extrasmall);
-}
-.insta__avatar {
-  display: flex; 
-  align-items: center; 
-  padding: 8px;
-}
-
-.hashtag {
-  color: var(--color-hashtag);
-  padding: 0 8px;
-}
-
-/* ---------------------------------foooter */
-footer {
-  width: 100%;
-  background: var(--color-dark-black);
-}
-
-.event-banner-wrap {
-  width: 100%;
-  background-color: var(--color-black);
-}
-.event__banner a {
-  color: var(--color-dark-white);
-  line-height: 50px;
-}
-
-.event__banner {
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.event__banner h6 {
-  text-align: left;
-}
-
-.event__banner h6 >a {
-  font-size: var(--font-extrasmall);
-}
-
-.sns {
-  display: flex;
-  width: 10%;
-}
-
-.sns >li {
-  margin: 0 5px;
-}
-
-.cs__service{
-  margin: 50px auto;
-  width: 48%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.tel {width: 48%; margin: 0 auto;}
-.cs__menu > ul {
-  width: 20%;
-}
-
-.tel > p, .cs__menu > ul  {
-  color: var(--color-dark-white);
-  font-weight: var(--weight-bold);
-  text-align: left;
-}
-
-.tel > address {
-  margin-top: 20px;
-  font-style:normal;
-}
-
-.tel > address > a:nth-child(1) {
-  font-size: var(--font-medium);
-  color: var(--color-light-white);
-  font-weight: var(--weight-extrabold);
-}
-
-.tel > address > a:last-child {
-  font-size: var(--font-micro);
-  color: var(--color-dark-white);
-}
-
-.cs__service {
-  width: 1200px;
-  margin: 30px auto;
-  display: flex;
-  justify-content: space-between;
-
-}
-
-.cs__menu {
-  display: flex;
-  justify-content: space-between;
-  width: 70%;
-}
-
-.cs__menu ul > a {
-  font-size: var(--font-micro);
-  color: var(--color-light-white);
-}
-
-.cs__menu > ul > li:first-child {
-  margin-top: 10px;
-}
-
-.cs__menu > ul > li > a{
-  font-size: var(--font-micro);
-}
-
-.about__company {
-  padding: 20px;
-}
-
-.about__company > p {
-  
-  font-size: var(--font-micro);
-  color: #454545;
-  letter-spacing: 1px;
-}
-
-
-/* Scroll arrow up button */
-.arrow-up {
-  position: fixed;
-  z-index: 50;
-  bottom: 50px;
-  right: 50px;
-  width: 60px;
-  height: 60px;
-  font-size: 40px;
-  line-height: 40px;
-  background: #000000;
-  border-radius: 50%;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 300ms ease-in;
-}
-.arrow-up i {
-  color:var(--color-white);
-}
-
-.arrow-up.visible {
-  opacity: 1;
-  pointer-events: auto;
-}
+  <!-- webfont -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <!-- style sheet -->
+  <link rel="stylesheet" href="./css/default.css">
+  <link rel="stylesheet" href="./css/font-face.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/AddClassList.css">
+  <link rel="stylesheet" href="./css/animation.css">
+  <link rel="stylesheet" href="./css/mobile.css">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./imgs/favicon.png">
+  <meta property="og:title" content="Have a Maryable Day!" />
+  <meta property="og:image" content="./imgs/" />
+  <meta property="og:description" content="ì‹ ìž… í¼ë¸”ë¦¬ì…” ì´ê³ ì€ì˜ í¬íŠ¸í´ë¦¬ì˜¤ìž…ë‹ˆë‹¤." />
+  <!-- og tags -->
+
+  <!-- HTLM5shiv ie6~8 -->
+  <!--[if lt IE 9]> 
+  <script src="assets/js/html5shiv.min.js"></script>
+  <script type="text/javascript">
+  alert("í˜„ìž¬ ë¸Œë¼ìš°ì €ëŠ” ì§€ì›í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤. í¬ë¡¬ ë¸Œë¼ìš°ì €ë¥¼ ì¶”ì²œí•©ë‹ˆë‹¤.!");
+  </script>
+  <![endif]-->
+  <!-- HTML5shiv : êµ¬ë²„ì „IEì—ì„œ ì§€ì›í•˜ì§€ ì•ŠëŠ” article, aside, details, figcaption, figure, footer, summaryë“±ì˜ 
+  ì‹œë©˜í‹± íƒœê·¸ë¥¼ ì¸ì‹í•  ìˆ˜ ìžˆë„ë¡ í˜¸í™˜ì„±ì„ ë§žì¶”ëŠ” ìŠ¤í¬ë¦½íŠ¸ ë¼ì´ë¸ŒëŸ¬ë¦¬ -->
+
+  <script defer src="./js/ie-checker.js"></script>
+  <script defer src="./js/modernizr-custom.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+  <script defer src="./js/main.js"></script>
+  <!-- script -->
+</head>
+<body>
+  <!-- preload ëžœë”© íŽ˜ì´ì§€ -->
+  <div class="preload">
+    <h2>Landing on my website soon...</h2>
+    <h3 class="progress-text">0</h3>
+    <img class="airplane1" src="./imgs/spaceship1.png" alt="spaceship for landing page">
+    <img class="cloud cloud1" src="./imgs/cloud1.png" alt="cloud1">
+    <img class="cloud cloud2" src="./imgs/cloud1.png" alt="cloud2">
+    <img class="cloud cloud3" src="./imgs/cloud1.png" alt="cloud3">
+    <img class="cloud cloud4" src="./imgs/cloud1.png" alt="cloud4">
+  </div> 
+<!-- preload  ëžœë”© íŽ˜ì´ì§€ ë-->
+
+<!-- skip ë©”ë‰´ -->
+<div id="skip">
+  <a rel="bookmark" tabindex="2" href="#">Header ë°”ë¡œê°€ê¸°</a>
+  <a rel="bookmark" tabindex="3" href="#">About me ë°”ë¡œê°€ê¸°</a>
+  <a rel="bookmark" tabindex="4" href="#">Web ë°”ë¡œê°€ê¸°</a>
+  <a rel="bookmark" tabindex="5" href="#">script ë°”ë¡œê°€ê¸°</a>
+  <a rel="bookmark" tabindex="6" href="#">Contact me ë°”ë¡œê°€ê¸°</a>
+</div>
+
+  <header id="header">
+    <h1 class="logo"><a href="index.html" tabindex="1"><img src="./imgs/logo.svg" alt="logo"></a></h1>
+    <ul class="navbar__menu">
+      <li class="navbar_item selected" data-link="#section1"><i class="xi-star active"></i> HOME<span class="mask"></span></li>
+      <li class="navbar_item" data-link="#section2"><i class="xi-star"></i> ABOUT ME<span class="mask"></span></li>
+      <li class="navbar_item" data-link="#section3"><i class="xi-star"></i> WEBSITE<span class="mask"></span></li>
+      <li class="navbar_item" data-link="#section4"><i class="xi-star"></i> MOBILE<span class="mask"></span></li>
+      <li class="navbar_item" data-link="#section5"><i class="xi-star"></i> SCRIPT<span class="mask"></span></li>
+      <li class="navbar_item" data-link="#section6"><i class="xi-star"></i> CONTACT ME<span class="mask"></span></li>
+    </ul>
+    <div class="toggleBtn"><span class="toggle"></span></div>
+  </header>
+  <!-- í—¤ë” ë -->
+
+  <div class="journey">
+    <p class="height_text" style="color:antiquewhite;">0</p>
+    <img class="stickyShip" src="./imgs/spaceship2.png" alt="you are welcome to my journey!">
+  </div> <!-- ì™¼ìª½ ì•„ëž˜ scroll up ë²„íŠ¼ -->
+
+  <section id="section1">
+    <div class="container">
+      <article class="sec_left">
+        <div class="txt-ani-wrap">
+          <h2 class="static-txt">I'm 
+            <span class="animate"></span>
+            <span class="cursor typing"></span>
+          </h2> <!-- static-txt -->
+        </div> <!-- txt-ani-wrap -->
+        <p class="who">ëŠìž„ì—†ì´ ë°°ìš°ê³  ë…¸ë ¥í•˜ëŠ” <br> <strong>ì‹ ìž… ì›¹ ê°œë°œìž ì´ê³ ì€ìž…ë‹ˆë‹¤.</strong> </p>
+        <div class="flating_rocks">
+          <figure>
+            <img src="./imgs/planet3.png" alt="floating orange planet1">
+            <img src="./imgs/planet4.png" alt="floating pink planet2">
+            <img src="./imgs/planet6.png" alt="floating blue water planet3">
+            <img src="./imgs/space_gas.png" alt="floating gas1">
+            <img src="./imgs/space_gas.png" alt="floating gas2">
+            <img src="./imgs/space_gas.png" alt="floating gas3">
+          </figure>
+        </div>
+      </article> <!-- left -->
+      <article class="sec_right">
+        <div class="avatar-wrap">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide1"></div>
+              <div class="swiper-slide slide2"></div>
+              <div class="swiper-slide slide3"></div>
+              <div class="swiper-slide slide4"></div>
+              <div class="swiper-slide slide5"></div>
+              <div class="swiper-slide slide6"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </article> <!-- left -->
+    </div>
+  </section> 
+<!-- section 1 end  -->
+
+  <section id="section2">
+    <div class="container">
+      <h2 class="between_message" style="color: mediumpurple;">ABOUT ME</h2>
+      <div class="content parallaxY">
+        <div class="txt-box">
+          <h4>ì•ˆë…•í•˜ì„¸ìš”.</h4>
+          <P>UX/UI í”„ë¡ íŠ¸ì•¤ë“œ ê³¼ì •ì„ ìˆ˜ê°•í•˜ë©° ëŒ€í•™êµ ë•Œ ë°°ìš´ ë””ìžì¸ì„ ìƒê¸°í•˜ë©° ê³µë¶€í•˜ì˜€ìŠµë‹ˆë‹¤. 
+          ì²˜ìŒì—ëŠ” ìƒê°ì„ í˜„ì‹¤ë¡œ ë§Œë“œëŠ” ê²ƒì— ë‹¨ìˆœí•œ ìž¬ë¯¸ë¥¼ ëŠê¼ˆì§€ë§Œ, ê¹Šì´ ê³µë¶€í•  ìˆ˜ë¡ ëŠìž„ì—†ì´ ë°°ìš°ê³ 
+          ë°œì „í•˜ì§€ ì•Šìœ¼ë©´ ë‹¤ìŒ ë‹¨ê³„ë¡œ ë‚˜ì•„ê°€ê¸° íž˜ë“¤ë‹¤ëŠ” ê²ƒì„ ì•Œê²Œ ë˜ì–´ ì •ì‹ ì—†ì´ ë§¤ì§„í–ˆìŠµë‹ˆë‹¤.
+          ì €ì˜ ê´€ì‹¬ê³¼ ì—´ì •ì„ ë°°ìš°ëŠ” ë°ì— ì‚¬ìš©í•˜ì—¬ ë„íƒœë˜ì§€ ì•Šê³  í•­ìƒ ë°œì „í•˜ëŠ” ì‚¬ëžŒì´ ë˜ê² ìŠµë‹ˆë‹¤.</P>
+          <a class="about_me_gal" href="./aboutMe.html" target="_blank">ê°¤ëŸ¬ë¦¬ ë³´ê¸°</a>
+        </div>
+        <div class="skills-wrap clearfix">
+          <div class="skill-bars">
+            <div class="bar">
+              <div class="info">
+                <span>HTML</span>
+              </div>
+              <div class="progress-line html">
+                <span></span>
+              </div>
+            </div>
+            <div class="bar">
+              <div class="info">
+                <span>CSS</span>
+              </div>
+              <div class="progress-line css">
+                <span></span>
+              </div>
+            </div>
+            <div class="bar">
+              <div class="info">
+                <span>jQuery</span>
+              </div>
+              <div class="progress-line jquery">
+                <span></span>
+              </div>
+            </div>
+            <div class="bar">
+              <div class="info">
+                <span>javaScript</span>
+              </div>
+              <div class="progress-line javaScript">
+                <span></span>
+              </div>
+            </div>
+          </div> <!-- skill-bars -->
+          <div class="skill-tools">
+            <div class="tool">
+              <p>illustrator</p>
+              <img src="./imgs/tools.png" alt="illustrator icon">
+            </div>
+
+            <div class="tool">
+              <p>photoshop</p>
+              <img src="./imgs/tools1.png" alt="illustrator icon">
+            </div>
+
+            <div class="tool">
+              <p>Figma</p>
+              <img src="./imgs/tools2.png" alt="illustrator icon">
+            </div>
+
+            <div class="tool">
+              <p>MS office</p>
+              <img src="./imgs/tools3.png" alt="illustrator icon">
+            </div>
+
+            <div class="tool">
+              <p>VS code</p>
+              <img src="./imgs/tools4.png" alt="illustrator icon">
+            </div>
+          </div> <!-- skill tools  -->
+          
+      <div class="skills-right">
+        <div class="challenging">
+          <p>challenging & Learning</p>
+          <ul>
+            <li>âœ” javaScript</li>
+            <li>âœ” React</li>
+            <li>âœ” TypeScript</li>
+          </ul>
+          </div>
+          <div class="etc">
+            <p>Etc.,</p>
+            <ul>
+              <li>Github</li>
+              <li>English</li>
+            </ul>
+            </div>
+      </div>
+      </div> <!-- skills wrap -->
+
+      <div class="about__edu">
+        <img src="./imgs/Ezen.jpg" alt="Ezen academy ë¡œê³ ">
+        <p class="school__name"> ì´ì  ì•„ì¹´ë°ë¯¸ ë¶„ë‹¹ </p>
+        <p class="school__name"> UI/UX í”„ë¡ íŠ¸ì•¤ë“œ ê³¼ì • ìˆ˜ë£Œ </p>
+        <p class="school__period">2020.10.30 - 2021.04.27</p>
+        <p>í”„ë¡ íŠ¸ì•¤ë“œ ìŠ¤íƒê³¼ ë°˜ì‘í˜• ì›¹ë””ìžì¸ì„ ìœ„í•œ UX/UIë¥¼ í•™ìŠµí•˜ì˜€ìŠµë‹ˆë‹¤. </p>
+      </div>
+      
+      <div class="about__edu">
+        <img src="./imgs/gtq.jpg" alt="GTQ ìžê²©ì¦ ë¡œê³ ">
+        <p class="school__name"> GTQ </p>
+        <p class="school__name"> í¬í† ìƒµ ìžê²©ì¦ 1ê¸‰ </p>
+        <p class="school__period">2020.12.18 - 2020.12.18</p>
+        <p> í”„ë¡ íŠ¸ì•¤ë“œ ê³¼ì •ì— ì°¸ì—¬í•˜ë©° í¬í† ìƒµ ìžê²©ì¦ 1ê¸‰ì„ ì·¨ë“í•˜ì˜€ìŠµë‹ˆë‹¤. </p>
+      </div>
+
+      <div class="about__edu">
+        <img src="./imgs/gtq.jpg" alt="GTQ ìžê²©ì¦ ë¡œê³ ">
+        <p class="school__name"> GTQi </p>
+        <p class="school__name"> ì¼ëŸ¬ìŠ¤íŠ¸ ìžê²©ì¦ 1ê¸‰ </p>
+        <p class="school__period">2020.03.19 - 2020.03.19</p>
+        <p> í”„ë¡ íŠ¸ì•¤ë“œ ê³¼ì •ì— ì°¸ì—¬í•˜ë©° ì¼ëŸ¬ìŠ¤íŠ¸ ìžê²©ì¦ 1ê¸‰ì„ ì·¨ë“í•˜ì˜€ìŠµë‹ˆë‹¤. </p>
+      </div>
+
+      <div class="about__edu">
+        <img src="./imgs/q_net.jpg" alt="íë„· ë¡œê³ ">
+        <p class="school__name"> ì›¹ë””ìžì¸ ê¸°ëŠ¥ì‚¬ </p>
+        <p class="school__name"> êµ­ê°€ ìžê²©ì¦ </p>
+        <p class="school__period">2020.02.03 - 2020.04.15</p>
+        <p> ì›¹ë””ìžì¸ ê¸°ëŠ¥ì‚¬ í•„ê¸°ì— í•©ê²©í•˜ì˜€ìœ¼ë©° ì‹¤ê¸° ì‹œí—˜ ê²°ê³¼ë¥¼ ê¸°ë‹¤ë¦¬ê³  ìžˆìŠµë‹ˆë‹¤. </p>
+      </div>
+      </div> <!-- content -->
+    </div><!-- container -->
+  </section>  <!-- section 2 end  -->
+
+
+  <section id="section3">
+    <h2 class="between_message">Let's take a look at my Website</h2>
+    <div class="container">
+      <ul class="sec3-list">
+        <li class="web left">
+          <div class="tit">
+            <h3>Static website</h3>
+            <p>MAC cosmetics ë¦¬ë””ìžì¸ ì›¹ì‚¬ì´íŠ¸ìž…ë‹ˆë‹¤.</p>
+          </div>
+          <div class="link_btn">
+            <a href="http://maryable.dothome.co.kr/" target="_parent">ì‚¬ì´íŠ¸ ë³´ê¸°</a>
+            <a href="https://github.com/Maryable/MAC-redesign">ì½”ë“œ ë³´ê¸°</a>
+          </div>
+          <div class="mockup-img-wrap">
+            <img class="pc-img" src="./imgs/projects/mac-pc.png" alt="ëª¨ë‹ˆí„°">
+            <div class="screen mac ir_pm">ì •ì  ì›¹í‘œì¤€ ì‚¬ì´íŠ¸</div>
+          </div> <!-- mockup-img-wrap -->
+          <div class="desc">
+            <ul>
+              <li><strong>The W3C Validator</strong>í†µê³¼</li>
+              <li><strong>ì›¹ì ‘ê·¼ì„± </strong>ê³ ë ¤í•œ íƒ­ë©”ë‰´</li>
+              <li><strong>ì§ì ‘ ë””ìžì¸í•œ ìƒì„¸ íŽ˜ì´ì§€</strong> <br> ë§¤íŠ¸ ë¦½ìŠ¤í‹± ìƒì„¸íŽ˜ì´ì§€, ì‹ ì œí’ˆ, ë² ìŠ¤íŠ¸ì…€ëŸ¬, ê³µì‹ëª°, ìž¥ë°”êµ¬ë‹ˆ</li>
+              <li><strong>Slick/Swiper </strong>ìŠ¬ë¼ì´ë“œ ì»¤ìŠ¤í…€</li>
+              <li>Scroll up ë²„íŠ¼ ìƒì„±</li>
+              <li><strong>ê·¸ë¦¬ë“œ ê¸°ì¤€ </strong>1440, 1200 px</li>
+              <li><strong>HTML, CSS, JS, jquery</strong></li>
+            </ul>
+          </div> <!-- desc -->
+        </li> <!-- website 1 end -->
+
+        <li class="web bottom">
+          <div class="tit">
+            <h3>Responsive website</h3>
+            <p>Converse ë¦¬ë””ìžì¸ ë°˜ì‘í˜• ì›¹ì‚¬ì´íŠ¸ìž…ë‹ˆë‹¤.</p>
+          </div>
+          <div class="link_btn">
+            <a href="http://rhdms608.dothome.co.kr" target="_parent">ì‚¬ì´íŠ¸ ë³´ê¸°</a>
+            <a href="https://github.com/Maryable/Converse-redesign" target="_blank">ì½”ë“œ ë³´ê¸°</a>
+          </div>
+          <div class="mockup-img-wrap">
+            <img class="pc-img" src="./imgs/projects/mac-pc.png" alt="ëª¨ë‹ˆí„°">
+            <div class="screen converse ir_pm">ë°˜ì‘í˜• ì»¨ë²„ìŠ¤ ì‚¬ì´íŠ¸</div>
+            <img class="mobile-img" src="./imgs/projects/converse_phone_mockup.png" alt="ì»¨ë²„ìŠ¤ ì‚¬ì´íŠ¸ ëª©ì—…">
+          </div> <!-- mockup-img-wrap -->
+          <div class="desc">
+            <ul>
+              <li><strong>The W3C Validator</strong>í†µê³¼</li>
+              <li><strong>ì›¹ ì ‘ê·¼ì„± </strong>ì„ ê³ ë ¤í•œ íƒ­ë©”ë‰´</li>
+              <li>scroll up & down ë²„íŠ¼, í–„ë²„ê±°ë²„íŠ¼ ì• ë‹ˆë©”ì´ì…˜</li>
+              <li>ë¸Œë¼ìš°ì €ë³„ <strong>í¬ë¡œìŠ¤ ë¸Œë¼ìš°ì§•</strong> í˜¸í™˜</li>
+              <li><strong>ë¯¸ë””ì–´ì¿¼ë¦¬ </strong> 1440, 1024, 980, 640, 480px</li>
+              <li><strong>HTML, CSS, JS, jquery</strong></li>
+            </ul>
+          </div> <!-- desc -->
+        </li> <!-- website 1 end -->
+
+        <li class="web right">
+          <div class="tit">
+            <h3>Responsive website</h3>
+            <p>Lotte Cinema ë°˜ì‘í˜• ì›¹ì‚¬ì´íŠ¸ìž…ë‹ˆë‹¤.</p>
+          </div>
+          <div class="link_btn">
+            <a href="http://claire42.dothome.co.kr/" target="_parent">ì‚¬ì´íŠ¸ ë³´ê¸°</a>
+            <a href="https://github.com/Maryable/Lotte-Cinema" target="_blank">ì½”ë“œ ë³´ê¸°</a>
+          </div>
+          <div class="mockup-img-wrap">
+            <img class="pc-img" src="./imgs/projects/mac-pc.png" alt="ëª¨ë‹ˆí„°">
+            <div class="screen lotte ir_pm">ë°˜ì‘í˜• ë¡¯ë°ì‹œë„¤ë§ˆ ì‚¬ì´íŠ¸</div>
+            <img class="mobile-img" src="./imgs/projects/lottecinema_phone_mockup.png" alt="ë¡¯ë°ì‹œë„¤ë§ˆ ì‚¬ì´íŠ¸ ëª©ì—…">
+          </div> <!-- mockup-img-wrap -->
+          <div class="desc">
+            <ul>
+              <li><strong>The W3C Validator</strong>í†µê³¼</li>
+              <li><strong>ì›¹ ì ‘ê·¼ì„±</strong>ì„ ê³ ë ¤í•œ íƒ­ë©”ë‰´</li>
+              <li>ë¸Œë¼ìš°ì €ë³„ <strong>í¬ë¡œìŠ¤ ë¸Œë¼ìš°ì§•</strong> í˜¸í™˜</li>
+              <li><strong>ë¯¸ë””ì–´ì¿¼ë¦¬</strong>1440, 1024, 980, 640px</li>
+              <li><strong>HTML, CSS, JS, jquery</strong></li>
+            </ul>
+          </div> <!-- desc -->
+        </li> <!-- website 1 end -->
+
+
+      </ul>
+      <div class="floating_man">
+          <!-- ì›¹ì‚¬ì´íŠ¸ ê·¼ì²˜ì— hovering í•˜ëŠ” í–‰ì„±ê³¼ ìš°ì£¼ì¸ -->
+        <img src="./imgs/spaceman.png" alt="an astronut1">
+        <img src="./imgs/spaceman.png" alt="an astronut2">
+        <img src="./imgs/planet2.png" alt="floating planet1">
+        <img src="./imgs/planet7.png" alt="floating planet2">
+      </div>
+    </div>
+  </section>  <!-- section 3 end  -->
+
+  <section id="section4">
+    <h2 class="between_message">Here's my app design</h2>
+    <div class="container">
+      <figure class="sec4fig">
+          <img src="./imgs/projects/iphone_mockup.png" alt="ì•„ì´í° ëª©ì—…">
+          <img src="./imgs/projects/phone-index.png" alt="Hangry xí]_sW–ßç|Š;žÚÔLI–„m ²'Æ˜*³¶ÙLžT-©muÔµ„ñVˆ”Áž„LL0ÄfÌŽ3ëÔc2¢†ÌTíG™}s·j¿ÂþÎ½Ý­ÛRK–Œq”…TŒ¤îûÿžÿ÷Üs=Á¢G£ÇÃÿûÙ©±‘ÉOÎ²t1›z'F,£ä¦{.ê=ô@URCï0ËªE…%ÓJÁP‹ƒ=&OŽá½ó"],æêïJÚ¥Ážß.Fôl^)j‰ŒÚÃ’z®¨æPëÌè ššV¥z9%«ö\ÒÔ™¼^(JEg´T1=˜R/iI5ÀaZN+jJ&`$•Œ:öŠ†ŠZ1£AG†©%öËef™žËh9•Ñ»XH”£!ãáEVP3ƒ=Fq6£iUEßé‚:5ØC31N„BS´œÖõéŒªä5#˜Ô³¡¤aD~5¥dµÌìà81£Ìž˜™N?÷ö¾Á_Gñ×‡¿~üàïþŽ÷ö¾›ÒŒ|F™4f”|ãk×Î@’©\ðS#¥f´K…`N-†rùlè²ªaU?ˆ£Á¨ý#˜ÕrAP,Š‘,hù"3
+ÉÚ”.jÅ MK™Q=«ò%¢á°ª&Sèë_ÐC/hÓZn°GÉé¹Ù¬^B“±húg ›QŒ/öœJŽ¯è”’D¿Î [M_ÔI©SJ)S¬Uñ›W)—¿8ÍgcÌhyµD)—Ê¨|]07ïöîZË¥ÔËµŽ÷®PbÀP3µà[-O–ŠŒv®‡gó€|-«L«F(Ÿ›và/Ò²ÓX,¯ç‚ø§ù†*Ÿ*—ëA”ž…2ZÂ}ú»’Z˜Eƒ}Á°ýÃ-ä5†>5BòL¼+	‚Kè©YÚw`ƒU^1·ËÖ[øÂªwo[«¶»5gÞ|x„åÓyë›ŠõÍÎV½³nþ~Éü~Îü¾l>^dæÒ–ù`…™ß¼Äkóê¯ýåfõö†µ°R½ºc—ÝIìW ÉL)¥²Ö™èUÏûìWCµ’)íÓR€z^"0S lKfÃð>£GÓ¢ óÓîK<ˆÔóØ%·>iêÅÛ(Q9Ô¦À÷‹
+‰ÿbRQ%—ÓK¹¤ €N»˜b ŸRu9, óÕ8Ho1ÎA‚‹’==‹l/¸•Úœ–cù¡˜Ô¬µý_l÷ù¦ùx…ûþ•Uo¯Ñ6™[_2ssÇü¶ckËúü5å½ÍÅB˜ÆØlgLÍ¥<«BýÆÒáZ§‡ø&I“²Aüœ’Œ»;žÑ§õ 45ü³È…ëÆRÊx×>ÎFP>gîâ¤Þ[×~,í‰¡*…d:Oè—ëvÎi*¦åòÀ[±¢¸QNíâep÷¤šÖ3€ÌÁžÝí9ëÚfM‚—
+tHAò@€½Xé¸]ƒ€q	ô‚ƒ€x*hŠ?`KøÞqdu¦DŸ1‰ÆÅ¡“¦‹µ‘äukã˜ÂV3…E½ J£iÚ‡3ý¤R(hî#Áà3@9í~QÔEw˜TE`Lm˜ÙYF¥6,Ú"Šæciý’Z`çÇÎ³çÀ],¨ŒãT1ÀëøÎ	Íç‡˜uÿ¡¹µDÈ¸0ÏbF^ÉE™uíJõó`µôÛS‡‚ÎÞ5t–/è©R²ˆ%(OiÍÀ=K`Ï‡©Õl“Qrq•Ó¡¼žPµÞ°„¨böhGê—º¤T#Ù¢_¾FæêKku§z³RýÃyY?,™÷Ël÷¯zssUvª[æ×`8KeQÚÜ¨°‰ó§ö…Î¿‡ÿš®¡½mš†—µ@2£j ˜Ö ‹±f¸ë/‘Bw6M Ãî'ïôÃËçj{†¬ùeó7N„íýÿß<b}‘#½½½6´¼D±)%4ÏKËÂ-FrPû9Œýß­ÌA6°îma{Íµy 3ý &µÞbeØ:Ë}XÛê"S ©gtH æŸ6¬GóH5Ö·ÆW€é«-ÇkH¢¯$‘C ’èa Iuq™’U¯®Q „à£ºð”…˜ùø!‹ôFÂÌz±Cÿ/¯¡X[ÄÎ0ëo›æÚëúrË=!:tÑ KÕÛ;fe‘– ½ýƒ™¿ß"Tø~W—^Z/–Ùo™õŸÖê$ºe 3Ÿ‘,ýË–3kÚ¢¯L’¢M¡­‰dÂ‘Xâã	$ôbQoÎ±ÀY­U¶[™·n?`ïæFþ}Ft5³hÂR±Ï¾¢†‡McYw+[¾‚¶Mæ6 À™[ËàåB¸æRµµvÐÞìÑˆß¼•TnY}<\: ¤$Ä2‡O()4EÍP³°Ê´j8?D(´ûì¹µ°jþyËQªË+Õk«6Ûb±DòÌZÙ_XM³x—™ëÖ7_UoƒE‹:Ö£U,ÄÏÚåp>Â¶Ê_œu^ÔÄ7!…ùj)ÂHþ­•æ2aóÂ—@SÑr{Ë¬þR<¯\/•ò‡ì]–åŠ&‰øM4:LR‚1’=dM0QÈL¤é¹0Ž¡Uï-ZßÞ‚ŠnÝ¿î«ð	FP³LI5&!ÔôÝï¸´T ?Ó´$Êf”„š!åz°gB›ÎÁt­Ûe5si	*½mÖjËê˜šU´LWøí–¼ZµùdÉ‚Äø§—Öç‹æÃ—½¯›kA+­rÅº·ÔK —•Û9i{?åŸÿØý¢lÂº±=_]®t6Þ<ì3z!%†Œ¶¼Ã•Þ×X›"‡x	v’i5y1 µ&,’ÞËË“ŽÌ×º Ú‘M¨…3˜ˆ°áJOZl´ñRG\“	¥È…
+P€êC—p´„‘Ö‹(‰äu¾”ÈjPÝÉb$!¶‹4±(î?§Œš…¬ß;1A]$4õå„\I–Š6§D±PIB¹2sAä	Ã]GÃ„ÉN-ˆQÚØË)ÂJ†Ï„"›¬dú’Pñ8o%ãqnM“ç«Ùbx°”Ræs‹é´Î6'3ZòbÐ}±·´Ž¬¸´*Ê©3$Vg8	²m 6t,¬Yk+Äg%qŽkÏ‚¤ÕÛ7^u$²]TµÌí57oV¬ësæ7›vëLÝ(%y¥€uƒÂËò)R¬;6=&æäYŒ¾±™ˆ·ÌÕëå¤Ã¦ƒñtlýmÃ*¯W[ôê)‰€:ù|Í|Ô|º2„pÂó
+Û3œYæÀ²êÙûšTb.l˜_bøM7¾)ÖLç ^„ ŒFœd°ÚªË¸`\Ó§íã˜æ|ñ€º§x)û!lK¨Üf0²ÉÂ,ªXUhhIIùà_Y	†<ÐâåÈTŸŒ9ô™/¨y/Àö)Ý7dÝ-›Û?ÌÆ§“Ö*¼•2ÔãšÔ]öžc{¹_v7 mÔ„oõx’9³¶wªw–Á~¹ÌßÔ¯·eË„‹;Ëa/œ§>­]Ã ÒýêÄãÍ(Æùy NAÌg˜@º¿¡b¼ñŽ©¢gÏ…œPo45ÿLJ?ðÄú~KX¦¬5
+dW¯§I|ñP&'ObaGFÚ¯`ÝÙ¬~sÃº÷„YW7©çG0#¶Û›U^kE0üX½²cÞ_K†ÐJ¤ ÜAwæãy" WšP¿îd@„†¿IÇÛØ¯¶g¸VÔÕT/¿]àDB0aBnÚè:Fjou#Þt
+qPÛq½jÍüËËŽ ¯FšÄ`H”ö‚¿/c[°LÕ/–›²¿e†ˆl>šß-WïBowuì Æ	|^»Û\Gö[cŸáÞ¿eÝ­ ™µµBÞ~¯Ð8»pO«×H¡:à=Ýýë‹Ý§8}ÚþêtZÞZÿ
+í‡ÌgÏ«·ŸtÔ¨zgå»kßH-¼·Ä8‘®pÙëÀ˜ Œu8ãé”vá{´¿åæ_*fyG$6Ãé„7°b>xJÖêf’£/Éè®ÝÄ²/™KO˜yu†áöYúÞ”–ä^Vý&¼0ä·MÉR°“äœyƒEú‰Æ^ï€u¹{ÂˆiÞÄÜ–`Çî ×>‰ÌÎ–üG¾oöç‘Í #ÓQ”ÊÀBIøõ¶u§,ãf•‹j)hâµW6öH”~Â]sÛÛ,d³Üˆçž ÚÇÒÔÞÅáÚóiÞ9ÄÏBÀC¸«1îÔD:Go­ÉfwíŠ$œ/¯“0ÄésÁáà›ÿ„}ÔBGCIä¨ ¸ñˆÙôˆ$mWdjÊ%;É¹-ð ‘×*Ï™_–9Eð‡²N’d´3Ñ¶²(Ž,›aYc/]&Æàøì —Ý=kAP¥úÅŠu³õ 4®…ÅÃo¡V]\Â±2XFûƒë²Ý"Ÿ«™¹güHuGœ2òóÑvÆúÇÊ“àÊv°°°B-¬7µ ùm!WÕùÍŸ²´‚³[®·+qî-£˜•%¬¡u£ä!š3ê\û›EG'8Vþ9åN´½.“%·¡ö1¨Ž6’ta{>°Ddkƒì%å.Oí×ª.‘Ë÷’ÁÞßì@8ì2r/‚Þ…¢!ó°_·‹mmÉƒ•ý|™ë‹í˜¸@”ÈgéÑ&±%Xõ;Á—¦3w9Úbkû¨&NÙöUóub´,`’†@{*±,úBT•ëÛþÜq²÷3nÂ'k? GVCðN›VàÂêjð(qx˜8ãqüJB5r³SJQå0wåFvì‡{€Øº¸:K¶Ük9¶®{8¨Q®p¦®†íúck\u³´íÞibéHÃw{¹ˆµºÌÄÈÈsáØFóïç ÛÌ]!±@üÜZØú¡úB ¶/Ó3˜±èÐ=È{‡Ù{%À¿›¿_f°&š_ÃÈ—¢z}…Ä…»þÂ:ƒ‘§øð,ï>Ý¢K÷–àRÂ}{ä=çå*è;1CåÇ‡âœ[ãHGz8˜sî&A_q
+ØÞU‹=s~+¥•jÒ)^ÔŽäŽ¤SéP— Ñš#»œôf\É]taÓ»FÑsŒ‹—îi!¼ ÅÛ:·Ö×S>à¸S5ØÃ=!O°Ÿ'“É÷I¡õxÔ6vÝF5œ½
