@@ -34,4 +34,7 @@ so that you can see the lipstick color in advance using the device you have.
 If you click the lipstick color, you can see the product, and the lipstick name is changed to that color.
 Underneath the product, I made a section where you could watch videos advertising the product, and I put the details of the product on the bottom of the page.
 
+If you want to see my web design from Figma, here is the link 
+https://www.figma.com/file/l4Rcq1qBXuhi8Yq5G3sWQS/MAC-%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%A6%AC%EB%94%94%EC%9E%90%EC%9D%B8-%EC%9D%B4%EA%B3%A0%EC%9D%80?node-id=0%3A1
+
 Copyright 2021 Goeun Lee / Maryable
